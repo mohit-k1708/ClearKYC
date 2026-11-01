@@ -1,0 +1,1793 @@
+{
+  "status": "SUCCESS",
+  "seed": 20261022,
+  "scale": "medium",
+  "referenceDate": "2026-10-31",
+  "batchSize": 1000,
+  "database": "clearkyc_medium",
+  "databaseCreated": false,
+  "counts": {
+    "customers": 1000,
+    "companies": 125,
+    "documents": 2500,
+    "reviewCases": 300,
+    "individuals": 875
+  },
+  "totalMs": 17584,
+  "stages": [
+    {
+      "entity": "Reference data",
+      "records": 34,
+      "generateMs": 4,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 4,
+      "recordsPerSecond": 8500
+    },
+    {
+      "entity": "Customers",
+      "records": 1000,
+      "generateMs": 925,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 925,
+      "recordsPerSecond": 1081
+    },
+    {
+      "entity": "BeneficialOwners",
+      "records": 273,
+      "generateMs": 210,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 210,
+      "recordsPerSecond": 1300
+    },
+    {
+      "entity": "RiskRatings",
+      "records": 1125,
+      "generateMs": 87,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 87,
+      "recordsPerSecond": 12931
+    },
+    {
+      "entity": "Documents + Verifications",
+      "records": 8688,
+      "generateMs": 973,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 973,
+      "recordsPerSecond": 8929
+    },
+    {
+      "entity": "OnboardingDecisions",
+      "records": 1185,
+      "generateMs": 49,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 49,
+      "recordsPerSecond": 24184
+    },
+    {
+      "entity": "Schedules + Exceptions + Cases",
+      "records": 3252,
+      "generateMs": 245,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 245,
+      "recordsPerSecond": 13273
+    },
+    {
+      "entity": "Alerts",
+      "records": 1679,
+      "generateMs": 37,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 37,
+      "recordsPerSecond": 45378
+    },
+    {
+      "entity": "AuditEvents",
+      "records": 17073,
+      "generateMs": 123,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 123,
+      "recordsPerSecond": 138805
+    },
+    {
+      "entity": "CustomerType",
+      "records": 2,
+      "generateMs": 0,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 0,
+      "recordsPerSecond": null
+    },
+    {
+      "entity": "Reviewer",
+      "records": 7,
+      "generateMs": 0,
+      "insertMs": 16,
+      "otherMs": 0,
+      "totalMs": 16,
+      "recordsPerSecond": 438
+    },
+    {
+      "entity": "KYCRequirement",
+      "records": 25,
+      "generateMs": 0,
+      "insertMs": 17,
+      "otherMs": 0,
+      "totalMs": 17,
+      "recordsPerSecond": 1471
+    },
+    {
+      "entity": "Customer",
+      "records": 1000,
+      "generateMs": 0,
+      "insertMs": 377,
+      "otherMs": 0,
+      "totalMs": 377,
+      "recordsPerSecond": 2653
+    },
+    {
+      "entity": "BeneficialOwner",
+      "records": 273,
+      "generateMs": 0,
+      "insertMs": 127,
+      "otherMs": 0,
+      "totalMs": 127,
+      "recordsPerSecond": 2150
+    },
+    {
+      "entity": "CompanyOwnership",
+      "records": 273,
+      "generateMs": 0,
+      "insertMs": 0,
+      "otherMs": 0,
+      "totalMs": 0,
+      "recordsPerSecond": null
+    },
+    {
+      "entity": "OwnerScreening",
+      "records": 546,
+      "generateMs": 0,
+      "insertMs": 95,
+      "otherMs": 0,
+      "totalMs": 95,
+      "recordsPerSecond": 5747
+    },
+    {
+      "entity": "OwnershipValidation",
+      "records": 125,
+      "generateMs": 0,
+      "insertMs": 24,
+      "otherMs": 0,
+      "totalMs": 24,
+      "recordsPerSecond": 5208
+    },
+    {
+      "entity": "Document",
+      "records": 2500,
+      "generateMs": 0,
+      "insertMs": 838,
+      "otherMs": 0,
+      "totalMs": 838,
+      "recordsPerSecond": 2983
+    },
+    {
+      "entity": "Verification",
+      "records": 6188,
+      "generateMs": 0,
+      "insertMs": 809,
+      "otherMs": 0,
+      "totalMs": 809,
+      "recordsPerSecond": 7649
+    },
+    {
+      "entity": "RiskRating",
+      "records": 1125,
+      "generateMs": 0,
+      "insertMs": 683,
+      "otherMs": 0,
+      "totalMs": 683,
+      "recordsPerSecond": 1647
+    },
+    {
+      "entity": "OnboardingDecision",
+      "records": 1185,
+      "generateMs": 0,
+      "insertMs": 214,
+      "otherMs": 0,
+      "totalMs": 214,
+      "recordsPerSecond": 5537
+    },
+    {
+      "entity": "ReviewSchedule",
+      "records": 1053,
+      "generateMs": 0,
+      "insertMs": 221,
+      "otherMs": 0,
+      "totalMs": 221,
+      "recordsPerSecond": 4765
+    },
+    {
+      "entity": "Exception",
+      "records": 1899,
+      "generateMs": 0,
+      "insertMs": 574,
+      "otherMs": 0,
+      "totalMs": 574,
+      "recordsPerSecond": 3308
+    },
+    {
+      "entity": "ReviewCase",
+      "records": 300,
+      "generateMs": 0,
+      "insertMs": 129,
+      "otherMs": 0,
+      "totalMs": 129,
+      "recordsPerSecond": 2326
+    },
+    {
+      "entity": "CaseHistory",
+      "records": 956,
+      "generateMs": 0,
+      "insertMs": 140,
+      "otherMs": 0,
+      "totalMs": 140,
+      "recordsPerSecond": 6829
+    },
+    {
+      "entity": "CaseNote",
+      "records": 214,
+      "generateMs": 0,
+      "insertMs": 28,
+      "otherMs": 0,
+      "totalMs": 28,
+      "recordsPerSecond": 7643
+    },
+    {
+      "entity": "Alert",
+      "records": 1679,
+      "generateMs": 0,
+      "insertMs": 679,
+      "otherMs": 0,
+      "totalMs": 679,
+      "recordsPerSecond": 2473
+    },
+    {
+      "entity": "AuditEvent",
+      "records": 17073,
+      "generateMs": 0,
+      "insertMs": 4095,
+      "otherMs": 0,
+      "totalMs": 4095,
+      "recordsPerSecond": 4169
+    },
+    {
+      "entity": "ID sequences + counters",
+      "records": 1,
+      "generateMs": 0,
+      "insertMs": 0,
+      "otherMs": 109,
+      "totalMs": 109,
+      "recordsPerSecond": 9
+    },
+    {
+      "entity": "Post-generation validation",
+      "records": 1,
+      "generateMs": 0,
+      "insertMs": 0,
+      "otherMs": 1603,
+      "totalMs": 1603,
+      "recordsPerSecond": 1
+    },
+    {
+      "entity": "Checksums",
+      "records": 1,
+      "generateMs": 0,
+      "insertMs": 0,
+      "otherMs": 499,
+      "totalMs": 499,
+      "recordsPerSecond": 2
+    }
+  ],
+  "errors": [],
+  "failedRecords": 0,
+  "details": {
+    "approvals": {
+      "approved": 160,
+      "rejected": 25,
+      "pendingOnly": 815
+    },
+    "ownership": {
+      "persons": 232,
+      "ownerRows": 273,
+      "peopleOwningSeveralCompanies": 37,
+      "maxCompaniesPerPerson": 3
+    },
+    "documents": {
+      "documents": 2500,
+      "firstCopies": 2325,
+      "replacements": 175,
+      "capacity": 3169,
+      "customersWithDocuments": 1000,
+      "outcomes": {
+        "rejected": 253,
+        "verified": 1587,
+        "resubmit": 239,
+        "expired": 62,
+        "expiring": 66,
+        "pending": 153,
+        "in_review": 140
+      }
+    },
+    "review": {
+      "schedules": 1053,
+      "overdueSchedules": 1,
+      "lateCompletedCycles": 19,
+      "exceptions": 1899,
+      "activeExceptions": 1705,
+      "resolvedExceptions": 194,
+      "cases": 300,
+      "historicalCases": 60,
+      "periodicOverdueCases": 1
+    },
+    "alerts": {
+      "alerts": 1679,
+      "byStatus": {
+        "Acknowledged": 128,
+        "New": 1167,
+        "In Progress": 83,
+        "Resolved": 301
+      },
+      "byThreshold": {
+        "7": 58,
+        "30": 68,
+        "60": 94,
+        "90": 121
+      },
+      "active": 1378
+    },
+    "audit": {
+      "events": 17073
+    }
+  },
+  "validation": {
+    "status": "PASSED",
+    "checks": 127,
+    "passed": 127,
+    "failed": 0,
+    "results": [
+      {
+        "group": "Counts",
+        "name": "Customers = 1000",
+        "passed": true,
+        "violations": 0,
+        "detail": "found 1000, expected 1000",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Counts",
+        "name": "Individuals = 875",
+        "passed": true,
+        "violations": 0,
+        "detail": "found 875, expected 875",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Counts",
+        "name": "Companies = 125",
+        "passed": true,
+        "violations": 0,
+        "detail": "found 125, expected 125",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Counts",
+        "name": "Documents = 2500",
+        "passed": true,
+        "violations": 0,
+        "detail": "found 2500, expected 2500",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Counts",
+        "name": "Review cases = 300",
+        "passed": true,
+        "violations": 0,
+        "detail": "found 300, expected 300",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Customer.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Document.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Verification.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Uniqueness",
+        "name": "RiskRating.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "BeneficialOwner.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "OwnerScreening.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "OwnershipValidation.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "ReviewSchedule.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Exception.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "ReviewCase.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "CaseHistory.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "CaseNote.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Alert.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "AuditEvent.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 13
+      },
+      {
+        "group": "Uniqueness",
+        "name": "KYCRequirement.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Reviewer.id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Customer.customer_id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "KYCRequirement.business_id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Document.business_id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Uniqueness",
+        "name": "ReviewCase.review_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "ReviewCase.case_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Alert.business_id is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Alert.alert_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "Exception.exception_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Uniqueness",
+        "name": "RiskRating.assessment_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Uniqueness",
+        "name": "AuditEvent.event_code is unique",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 13
+      },
+      {
+        "group": "ID formats",
+        "name": "Customer ID (CUS-000001) follows its format",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "ID formats",
+        "name": "KYC requirement ID (KYC-2026-000001) follows its format",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "ID formats",
+        "name": "Document ID (DOC-CUS-000001-001) follows its format",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 11
+      },
+      {
+        "group": "ID formats",
+        "name": "Review ID (REV-CUS-000001-2026) follows its format",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "ID formats",
+        "name": "Alert ID (ALT-2026-000001) follows its format",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 8
+      },
+      {
+        "group": "ID formats",
+        "name": "Document ID belongs to its own customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "ID formats",
+        "name": "Review ID belongs to its own customer and year",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "ID formats",
+        "name": "Alert ID year matches the alert creation year",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Customer.customer_type_id -> CustomerType",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Document.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Document.requirement_id -> KYCRequirement",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Verification.document_id -> Document",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Verification.reviewer_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Foreign keys",
+        "name": "RiskRating.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "RiskRating.assessed_by_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "BeneficialOwner.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "OwnerScreening.beneficial_owner_id -> BeneficialOwner",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "OwnershipValidation.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewSchedule.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Exception.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewCase.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewCase.exception_id -> Exception",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewCase.review_schedule_id -> ReviewSchedule",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewCase.assigned_analyst_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Foreign keys",
+        "name": "ReviewCase.assigned_reviewer_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "CaseHistory.review_case_id -> ReviewCase",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "CaseNote.review_case_id -> ReviewCase",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Alert.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "Alert.exception_id -> Exception",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Foreign keys",
+        "name": "AuditEvent.user_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 8
+      },
+      {
+        "group": "Foreign keys",
+        "name": "CompanyOwnership -> company and owner",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Customer types",
+        "name": "Individuals have date of birth + occupation and no company fields",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Customer types",
+        "name": "Companies have registration number, activity, incorporation date and no personal fields",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Customer types",
+        "name": "Individuals are adults at onboarding",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Customer types",
+        "name": "Companies were incorporated before onboarding",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Customer types",
+        "name": "Customers are onboarded on or before the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Customer types",
+        "name": "Beneficial owners belong to companies only",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Documents",
+        "name": "Dates are consistent (issue <= submission, issue <= expiry)",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Documents",
+        "name": "No document is submitted before its customer was onboarded",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Documents",
+        "name": "No document is submitted after the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Documents",
+        "name": "Document type matches its requirement",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Documents",
+        "name": "Requirement matches the customer type",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 6
+      },
+      {
+        "group": "Documents",
+        "name": "Document status equals the newest verification",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 12
+      },
+      {
+        "group": "Verifications",
+        "name": "Every document starts with one Pending record by the system",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 33
+      },
+      {
+        "group": "Verifications",
+        "name": "Decisions are by active Reviewers or Admins",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Verifications",
+        "name": "Verification dates are in order and not before submission",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 20
+      },
+      {
+        "group": "Verifications",
+        "name": "A document is never verified after its expiry date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Ownership",
+        "name": "Every company has at least one owner",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Ownership",
+        "name": "Ownership of every company adds up to exactly 100.00%",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Ownership",
+        "name": "Each owner holds a valid share (0 < % <= 100)",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Ownership",
+        "name": "Every company has a RECONCILED ownership check",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Ownership",
+        "name": "CompanyOwnership mirrors every owner (company, owner, percentage)",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Ownership",
+        "name": "Only one active ownership row per company and owner",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Ownership",
+        "name": "A person appears at most once per company",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Ownership",
+        "name": "Owners were added after their company was onboarded",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Risk",
+        "name": "Every customer has a risk assessment",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Risk",
+        "name": "The first assessment has no previous level; later ones record it",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Risk",
+        "name": "Previous level equals the earlier assessment level",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Risk",
+        "name": "Every company has both onboarding and ownership assessments",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Risk",
+        "name": "Assessments are not dated before the customer or after the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Reviews",
+        "name": "Exactly one current schedule per customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Reviews",
+        "name": "Schedule interval matches the risk level (36 / 24 / 12 months)",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Reviews",
+        "name": "Next review date = last review date + interval",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Reviews",
+        "name": "Cases belong to the same customer as their exception and schedule",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Reviews",
+        "name": "Active cases belong to active exceptions; Resolved / Closed cases to resolved ones",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Reviews",
+        "name": "An exception is \"In Review\" exactly when it has an active case",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Reviews",
+        "name": "Every overdue periodic review already has its active case",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Reviews",
+        "name": "Case history starts with CREATED and ends in the case status",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Reviews",
+        "name": "Case history is in time order",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Reviews",
+        "name": "Cases are not created before their exception was detected",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Reviews",
+        "name": "Escalated or approved cases name a compliance reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Reviews",
+        "name": "No active exception is duplicated",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Reviews",
+        "name": "Exceptions are detected after the customer was onboarded",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Reviews",
+        "name": "Exception source records exist",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 6
+      },
+      {
+        "group": "Alerts",
+        "name": "No duplicate active alert for one condition",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Alerts",
+        "name": "Expiry thresholds are 90, 60, 30 or 7 only",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Alerts",
+        "name": "One expiry alert per document and threshold",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Alerts",
+        "name": "The active expiry alert is the closest threshold the document has reached",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 6
+      },
+      {
+        "group": "Alerts",
+        "name": "Active expiry alerts exist only for valid documents expiring within 90 days",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Alerts",
+        "name": "Alert source records exist",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 5
+      },
+      {
+        "group": "Alerts",
+        "name": "Linked exception belongs to the same customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Alerts",
+        "name": "Closed alerts are closed after they were created and not after the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Alerts",
+        "name": "Acknowledged alerts name who acknowledged them",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "OnboardingDecision.customer_id -> Customer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Foreign keys",
+        "name": "OnboardingDecision.decided_by_id -> Reviewer",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Decisions",
+        "name": "Every customer has a Pending Review entry from onboarding",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Decisions",
+        "name": "Decisions are dated between onboarding and the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Decisions",
+        "name": "Approvals and rejections are by active Reviewers or Admins",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 2
+      },
+      {
+        "group": "Decisions",
+        "name": "A customer is approved at most once and never after being rejected",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Decisions",
+        "name": "Every document records the name written on it",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 3
+      },
+      {
+        "group": "Audit",
+        "name": "Audit event references point to existing records",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 26
+      },
+      {
+        "group": "Audit",
+        "name": "Audit event customers exist",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 11
+      },
+      {
+        "group": "Audit",
+        "name": "Audit event references match the record business code",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 25
+      },
+      {
+        "group": "Audit",
+        "name": "Audit events are not dated after the reference date",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 1
+      },
+      {
+        "group": "Audit",
+        "name": "Every customer and every case has its creation event",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 4
+      },
+      {
+        "group": "Audit",
+        "name": "Audit events hold no PAN-like or Aadhaar-like text",
+        "passed": true,
+        "violations": 0,
+        "detail": "no violations",
+        "examples": [],
+        "ms": 82
+      }
+    ],
+    "application": [
+      {
+        "code": "PK_CUSTOMER_CODE",
+        "title": "No duplicate Customer ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_RISK_ASSESSMENT_CODE",
+        "title": "No duplicate risk assessment ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_CASE_CODE",
+        "title": "No duplicate review case ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_EXCEPTION_CODE",
+        "title": "No duplicate exception ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_ALERT_CODE",
+        "title": "No duplicate alert ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_AUDIT_EVENT_CODE",
+        "title": "No duplicate audit event ID",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_DOCUMENT_DUPLICATE",
+        "title": "No duplicate document submissions",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PK_OWNER_DUPLICATE",
+        "title": "No duplicate beneficial owners",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_DOCUMENT_CUSTOMER",
+        "title": "Documents belong to existing customers",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_VERIFICATION_DOCUMENT",
+        "title": "Verification records belong to existing documents",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_CASE_CUSTOMER",
+        "title": "Review cases belong to existing customers",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_ALERT_CUSTOMER",
+        "title": "Alerts belong to existing customers",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_OWNER_COMPANY",
+        "title": "Beneficial owners belong to existing company customers",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "FK_CASE_LINKS",
+        "title": "Cases link to existing exceptions and review schedules",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "DOC_ISSUE_AFTER_SUBMISSION",
+        "title": "Issue date is not after the submission date",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "DOC_EXPIRY_BEFORE_ISSUE",
+        "title": "Expiry date is not before the issue date",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "DOC_INVALID_STATUS",
+        "title": "Documents have a valid status",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "DOC_STATUS_MATCHES_VERIFICATION",
+        "title": "Document status matches its latest verification",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "OWN_PERCENTAGE_RANGE",
+        "title": "Ownership percentage is between 0 and 100",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "OWN_TOTAL_OVER_100",
+        "title": "Total ownership does not exceed 100%",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "OWN_MISSING_OWNERS",
+        "title": "Companies have beneficial owners recorded",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "OWN_MISSING_PERCENTAGE",
+        "title": "Beneficial owners have an ownership percentage",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "RISK_RULES_FOLLOWED",
+        "title": "Risk scores and levels follow the configured rules",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "RISK_HISTORY_PRESERVED",
+        "title": "Risk assessment history is complete and in order",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "CASE_CLOSED_WITHOUT_NOTES",
+        "title": "Resolved and closed cases have resolution notes",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "CASE_STATUS_TRANSITIONS",
+        "title": "Case status changes follow the workflow",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "CASE_TIMESTAMPS_CONSISTENT",
+        "title": "Case dates match the case status",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "CASE_OVERDUE_IDENTIFIED",
+        "title": "No active case is past its due date",
+        "outcome": "Warning",
+        "issues": 64
+      },
+      {
+        "code": "KYC_COMPLETENESS_CONSISTENT",
+        "title": "KYC completeness matches documents and requirements",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "KYC_REQUIREMENTS_DEFINED",
+        "title": "Every customer has KYC requirements to be measured against",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "ALERT_ACTIVE_VALID",
+        "title": "Active alerts reference a valid, current issue",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "ALERT_NO_DUPLICATE_ACTIVE",
+        "title": "No duplicate active alerts for the same issue",
+        "outcome": "Passed",
+        "issues": 0
+      },
+      {
+        "code": "PERIODIC_REVIEW_DATES",
+        "title": "Periodic review dates are logically consistent",
+        "outcome": "Passed",
+        "issues": 0
+      }
+    ],
+    "applicationFailed": 0,
+    "applicationWarnings": 1
+  },
+  "checksums": {
+    "Reviewer": {
+      "rows": 7,
+      "checksum": "631248622948ea84bb7d578fb5b07ad4"
+    },
+    "KYCRequirement": {
+      "rows": 25,
+      "checksum": "741569dd284de58d0fa73a305d986f1f"
+    },
+    "Customer": {
+      "rows": 1000,
+      "checksum": "49484b01c5434d67ad778d97cda1e987"
+    },
+    "BeneficialOwner": {
+      "rows": 273,
+      "checksum": "f0f7c1d51bfe5f98c45379f38ab38a9a"
+    },
+    "OwnerScreening": {
+      "rows": 546,
+      "checksum": "5788dcec741c073060a7fb555c320869"
+    },
+    "OwnershipValidation": {
+      "rows": 125,
+      "checksum": "b0a76500ee6f0047000e27f236425ff4"
+    },
+    "Document": {
+      "rows": 2500,
+      "checksum": "19ae25654adcb734d785cee2f6e1d08a"
+    },
+    "Verification": {
+      "rows": 6188,
+      "checksum": "1759ae0137bda4a208f824001f4f537b"
+    },
+    "RiskRating": {
+      "rows": 1125,
+      "checksum": "e1c3592886e7628bd2455a8703e8981c"
+    },
+    "OnboardingDecision": {
+      "rows": 1185,
+      "checksum": "00fb6e70fb82d068ad3c3e116d3ea759"
+    },
+    "ReviewSchedule": {
+      "rows": 1053,
+      "checksum": "636f759750e85aff525ea3c0ae153aef"
+    },
+    "Exception": {
+      "rows": 1899,
+      "checksum": "72b241e23377efec7cab4262b935607c"
+    },
+    "ReviewCase": {
+      "rows": 300,
+      "checksum": "ccd9fdbba38c47ae3b5e134cdeabfa2c"
+    },
+    "CaseHistory": {
+      "rows": 956,
+      "checksum": "6ab7335ea86f185edf0048c27d02174b"
+    },
+    "CaseNote": {
+      "rows": 214,
+      "checksum": "09432f10dd11574c00116fe5afb27c0d"
+    },
+    "Alert": {
+      "rows": 1679,
+      "checksum": "91e1271df4489f4c42a57caaf191be24"
+    },
+    "AuditEvent": {
+      "rows": 17073,
+      "checksum": "fe5c2b3c0e0e3f5b3cd47dafe791ff98"
+    },
+    "CompanyOwnership": {
+      "rows": 273,
+      "checksum": "345b97bfc4536eac339052d40206e8e3"
+    },
+    "IdCounter": {
+      "rows": 1256,
+      "checksum": "0e7b2384a6d5beb82af2b04032a7a21c"
+    },
+    "dataset": "4cc8a7771fb5ab182867e43501c8e5b8"
+  },
+  "failedRecordCount": 0,
+  "generatedAtWallClock": "2026-10-30T20:24:44.828Z"
+}

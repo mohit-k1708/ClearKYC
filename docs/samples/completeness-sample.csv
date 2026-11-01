@@ -1,0 +1,7 @@
+Customer ID,Customer Type,Risk Level,Mandatory Requirements,Verified,Missing,Pending Verification,Rejected,Requires Resubmission,Expired,Expiring Within 30 Days,Completeness %,Completeness Status,As Of
+CUS-000001,Individual,Low,3,1,0,0,1,1,0,0,33.3,Partially Complete,2026-10-30
+CUS-000002,Individual,Low,3,1,1,1,0,0,0,0,33.3,Partially Complete,2026-10-30
+CUS-000003,Individual,Low,3,2,0,1,0,0,0,0,66.7,Partially Complete,2026-10-30
+CUS-000004,Individual,Low,3,3,0,0,0,0,0,1,100,Complete,2026-10-30
+CUS-000005,Company,Medium,4,3,1,0,0,0,0,0,75,Partially Complete,2026-10-30
+CUS-000006,Individual,Medium,4,2,0,0,0,0,2,0,50,Partially Complete,2026-10-30

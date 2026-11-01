@@ -1,0 +1,92 @@
+{
+  "generator_version": "4.0.0",
+  "seed": 20261022,
+  "scale": "full",
+  "reference_date": "2026-10-31",
+  "batch_size": 1000,
+  "volumes": {
+    "customers": 8000,
+    "companies": 1000,
+    "documents": 20000,
+    "reviewCases": 3000
+  },
+  "ratios": {
+    "onboardingWindowDays": 1095,
+    "recentBias": 1.35,
+    "ownersPerCompany": [
+      [
+        1,
+        0.25
+      ],
+      [
+        2,
+        0.4
+      ],
+      [
+        3,
+        0.25
+      ],
+      [
+        4,
+        0.1
+      ]
+    ],
+    "sharedPersonRate": 0.12,
+    "maxCompaniesPerPerson": 3,
+    "replacementDocumentRate": 0.07,
+    "documentOutcomes": [
+      [
+        "verified",
+        0.64
+      ],
+      [
+        "expiring",
+        0.05
+      ],
+      [
+        "expired",
+        0.06
+      ],
+      [
+        "pending",
+        0.07
+      ],
+      [
+        "in_review",
+        0.06
+      ],
+      [
+        "rejected",
+        0.06
+      ],
+      [
+        "resubmit",
+        0.06
+      ]
+    ],
+    "expiryBoost": 2.5,
+    "fileAttachedRate": 0.4,
+    "completedReviewRate": 0.88,
+    "historicalCaseShare": 0.2,
+    "alertAcknowledgedRate": 0.11,
+    "alertInProgressRate": 0.07,
+    "pepPotentialRate": 0.025,
+    "sanctionsPotentialRate": 0.004
+  },
+  "planted_issues_per_type": {
+    "EXPIRED_DOCUMENT_MARKED_VALID": 60,
+    "APPROVED_WITH_MISSING_EVIDENCE": 50,
+    "OWNERSHIP_OVER_100": 40,
+    "CLOSED_WITHOUT_RESOLUTION": 50,
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": 40,
+    "DOCUMENT_NAME_MISMATCH": 70,
+    "legitimateSharedDocuments": 20
+  },
+  "commands": {
+    "regenerate_everything": "npm run dataset:all -- --scale=full",
+    "baseline": "npm run generate:full -- --reset",
+    "inject_edge_cases": "npm run inject:edge-cases -- --scale=full",
+    "verify_reproducibility": "npm run test:reproducibility -- --scale=full"
+  },
+  "note": "Same seed, scale, reference date and configuration (and the same ENCRYPTION_KEY / HASH_KEY in .env) reproduce every file of this package byte for byte."
+}

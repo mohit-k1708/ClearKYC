@@ -1,0 +1,35 @@
+{
+  "reference_date": "2026-10-31",
+  "total_customers": 8000,
+  "total_individual_customers": 7000,
+  "total_company_customers": 1000,
+  "total_documents": 20000,
+  "total_review_cases": 3000,
+  "total_beneficial_owners": 2222,
+  "total_verifications": 49307,
+  "total_risk_assessments": 9000,
+  "total_alerts": 14076,
+  "total_audit_events": 139968,
+  "total_validation_checks": 182,
+  "passed_checks": 179,
+  "passed_with_expected_exceptions": 3,
+  "failed_checks": 0,
+  "expected_planted_anomalies": {
+    "labelled_issues": 310,
+    "violations_explained_by_labels": 150,
+    "checks_showing_them": 3
+  },
+  "unexpected_data_errors": 0,
+  "informational_findings": [
+    {
+      "check": "Overdue active cases (past their due date) - informational",
+      "count": 633
+    }
+  ],
+  "validation_status": "PASSED",
+  "reproducibility_status": "PASS",
+  "checksum_status": "GENERATED",
+  "export_status": "VERIFIED",
+  "checksum_verification_command": "npm run verify:checksums",
+  "packaging_problems": []
+}

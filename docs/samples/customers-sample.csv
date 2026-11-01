@@ -1,0 +1,7 @@
+Customer ID,Customer Type,Full Name,Email (masked),Phone (masked),Country,PAN (masked),Aadhaar (masked),Registration Status,Risk Level,Risk Score,Created At
+CUS-000001,Individual,Kabir Das,k***@example.com,XXXXXXXXX2160,IN,XXXXXX771I,XXXX XXXX 3350,Registered,Low,5,2026-10-30T16:48:59.331Z
+CUS-000002,Individual,Riya Verma,r***@example.com,XXXXXXXXX3445,IN,XXXXXX017M,XXXX XXXX 8011,Registered,Low,5,2026-10-30T16:48:59.356Z
+CUS-000003,Individual,Zoya Menon,z***@example.com,XXXXXXXXX8562,IN,XXXXXX938H,XXXX XXXX 6639,Registered,Low,5,2026-10-30T16:48:59.369Z
+CUS-000004,Individual,Neel Joshi,n***@example.com,XXXXXXXXX5164,IN,XXXXXX730S,XXXX XXXX 9715,Registered,Low,5,2026-10-30T16:48:59.383Z
+CUS-000005,Company,Orchid Foods Pvt Ltd,c***@orchid-demo.example.com,XXXXXXXXX1623,IN,XXXXXX183G,,Registered,Medium,45,2026-10-30T16:48:59.397Z
+CUS-000006,Individual,Meera Patel,m***@example.com,XXXXXXXXX4522,IN,XXXXXX663N,XXXX XXXX 2979,Registered,Medium,35,2026-10-30T16:48:59.413Z

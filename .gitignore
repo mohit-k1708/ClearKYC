@@ -1,0 +1,41 @@
+# ---- Secrets and local configuration (never commit) --------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ---- Dependencies and build output ----------------------------------------------------------------------
+node_modules/
+dist/
+client/dist/
+coverage/
+
+# ---- Local databases and runtime files -----------------------------------------------------------------
+.pgdata/
+server/uploads/
+*.sqlite
+*.db
+*.dump
+*.bak
+
+# ---- Logs and temporary files ---------------------------------------------------------------------------
+*.log
+npm-debug.log*
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ---- Generated on every test run (the test scripts themselves are committed) ----------------------------
+tests/browser/screenshots/
+tests/browser/last-run.json
+
+# ---- Editor and assistant settings -----------------------------------------------------------------------
+.vscode/
+.idea/
+.claude/
+
+# NOT ignored on purpose (submission artifacts): ClearKYC-Dataset/ (the packaged dataset, including its .sql files),
+# dataset/ (answer key and reports of the last run), generator/reports/, docs/ and documentation/.

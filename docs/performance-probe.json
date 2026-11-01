@@ -1,0 +1,259 @@
+{
+  "database_copy_of": "clearkyc_full",
+  "counts": {
+    "customers": 8000,
+    "documents": 20000,
+    "reviewCases": 3000
+  },
+  "probes": [
+    {
+      "label": "Customer list (page 1)",
+      "route": "/customers?page=1&pageSize=20",
+      "status": 200,
+      "cold_ms": 99,
+      "median_ms": 83,
+      "bytes": 5940
+    },
+    {
+      "label": "Customer list, last page",
+      "route": "/customers?page=400&pageSize=20",
+      "status": 200,
+      "cold_ms": 89,
+      "median_ms": 78,
+      "bytes": 5979
+    },
+    {
+      "label": "Customer search by name",
+      "route": "/customers?search=Sharma&pageSize=20",
+      "status": 200,
+      "cold_ms": 37,
+      "median_ms": 31,
+      "bytes": 6019
+    },
+    {
+      "label": "Customer filter: companies, High risk",
+      "route": "/customers?customerType=Company&riskLevel=High&pageSize=20",
+      "status": 200,
+      "cold_ms": 78,
+      "median_ms": 68,
+      "bytes": 5940
+    },
+    {
+      "label": "Customer profile",
+      "route": "/customers/CUS-004000",
+      "status": 200,
+      "cold_ms": 15,
+      "median_ms": 12,
+      "bytes": 1183
+    },
+    {
+      "label": "Customer KYC completeness",
+      "route": "/customers/CUS-004000/kyc-completeness",
+      "status": 200,
+      "cold_ms": 68,
+      "median_ms": 18,
+      "bytes": 2209
+    },
+    {
+      "label": "Dashboard summary",
+      "route": "/dashboard/summary",
+      "status": 200,
+      "cold_ms": 89,
+      "median_ms": 89,
+      "bytes": 157
+    },
+    {
+      "label": "Overview analytics (last 30 days)",
+      "route": "/analytics/overview",
+      "status": 200,
+      "cold_ms": 1573,
+      "median_ms": 1261,
+      "bytes": 6879
+    },
+    {
+      "label": "Overview analytics (all time)",
+      "route": "/analytics/overview?range=all",
+      "status": 200,
+      "cold_ms": 1063,
+      "median_ms": 963,
+      "bytes": 6874
+    },
+    {
+      "label": "Customer analytics",
+      "route": "/analytics/customers?range=all",
+      "status": 200,
+      "cold_ms": 987,
+      "median_ms": 987,
+      "bytes": 2961
+    },
+    {
+      "label": "Document analytics",
+      "route": "/analytics/documents?range=all",
+      "status": 200,
+      "cold_ms": 260,
+      "median_ms": 278,
+      "bytes": 571
+    },
+    {
+      "label": "Ownership analytics",
+      "route": "/analytics/ownership?range=all",
+      "status": 200,
+      "cold_ms": 167,
+      "median_ms": 164,
+      "bytes": 351
+    },
+    {
+      "label": "Review case analytics",
+      "route": "/analytics/review-cases?range=all",
+      "status": 200,
+      "cold_ms": 35,
+      "median_ms": 39,
+      "bytes": 416
+    },
+    {
+      "label": "Document list",
+      "route": "/documents?pageSize=20",
+      "status": 200,
+      "cold_ms": 90,
+      "median_ms": 78,
+      "bytes": 10088
+    },
+    {
+      "label": "Document search",
+      "route": "/documents?search=CUS-004000&pageSize=20",
+      "status": 200,
+      "cold_ms": 77,
+      "median_ms": 70,
+      "bytes": 1095
+    },
+    {
+      "label": "KYC completeness exceptions",
+      "route": "/kyc/exceptions?pageSize=20",
+      "status": 200,
+      "cold_ms": 746,
+      "median_ms": 689,
+      "bytes": 6962
+    },
+    {
+      "label": "Exceptions list",
+      "route": "/exceptions?pageSize=20",
+      "status": 200,
+      "cold_ms": 151,
+      "median_ms": 151,
+      "bytes": 13986
+    },
+    {
+      "label": "Review cases list",
+      "route": "/review-cases?pageSize=15",
+      "status": 200,
+      "cold_ms": 32,
+      "median_ms": 44,
+      "bytes": 9011
+    },
+    {
+      "label": "Review dashboard",
+      "route": "/review-dashboard/summary",
+      "status": 200,
+      "cold_ms": 100,
+      "median_ms": 156,
+      "bytes": 440
+    },
+    {
+      "label": "Periodic reviews: overdue",
+      "route": "/reviews/overdue?pageSize=20",
+      "status": 200,
+      "cold_ms": 14,
+      "median_ms": 15,
+      "bytes": 9045
+    },
+    {
+      "label": "Alerts: active",
+      "route": "/alerts?status=active&pageSize=12",
+      "status": 200,
+      "cold_ms": 231,
+      "median_ms": 219,
+      "bytes": 9426
+    },
+    {
+      "label": "Alerts summary",
+      "route": "/alerts/summary",
+      "status": 200,
+      "cold_ms": 25,
+      "median_ms": 18,
+      "bytes": 106
+    },
+    {
+      "label": "Audit trail (page 1)",
+      "route": "/audit-events?pageSize=15",
+      "status": 200,
+      "cold_ms": 52,
+      "median_ms": 53,
+      "bytes": 8965
+    },
+    {
+      "label": "Audit trail by customer",
+      "route": "/audit-events?customerId=CUS-004000&pageSize=15",
+      "status": 200,
+      "cold_ms": 11,
+      "median_ms": 15,
+      "bytes": 8214
+    },
+    {
+      "label": "Recent activity",
+      "route": "/activity/recent?limit=8",
+      "status": 200,
+      "cold_ms": 12,
+      "median_ms": 16,
+      "bytes": 2255
+    },
+    {
+      "label": "Ownership overview",
+      "route": "/ownership/overview?pageSize=20",
+      "status": 200,
+      "cold_ms": 31,
+      "median_ms": 36,
+      "bytes": 4986
+    },
+    {
+      "label": "Risk history list",
+      "route": "/risk-assessments?pageSize=20",
+      "status": 200,
+      "cold_ms": 54,
+      "median_ms": 63,
+      "bytes": 33212
+    },
+    {
+      "label": "Export: documents CSV",
+      "route": "/exports/documents",
+      "status": 200,
+      "cold_ms": 3568,
+      "median_ms": 3568,
+      "bytes": 2252004
+    },
+    {
+      "label": "Export: customers CSV",
+      "route": "/exports/customers",
+      "status": 200,
+      "cold_ms": 2266,
+      "median_ms": 2352,
+      "bytes": 1120025
+    },
+    {
+      "label": "Run data validation (all checks)",
+      "route": "POST /data-validation/run",
+      "status": 201,
+      "cold_ms": 7925,
+      "median_ms": null,
+      "bytes": null
+    },
+    {
+      "label": "Run detection for ALL customers",
+      "route": "POST /exceptions/detect",
+      "status": 200,
+      "cold_ms": 77639,
+      "median_ms": null,
+      "bytes": null
+    }
+  ],
+  "note": "Times are wall-clock milliseconds on the development machine (local PostgreSQL, Node, loopback). The first column is the first call; the second is the median of five."
+}

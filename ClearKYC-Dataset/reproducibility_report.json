@@ -1,0 +1,489 @@
+{
+  "test": "ClearKYC reproducibility",
+  "seed": 20261022,
+  "scale": "full",
+  "reference_date": "2026-10-31",
+  "configuration": {
+    "scale": "full",
+    "seed": 20261022,
+    "reference_date": "2026-10-31",
+    "batch_size": 1000,
+    "steps": [
+      "1. generate baseline",
+      "2. inject labelled edge cases",
+      "3. detect anomalies",
+      "4. evaluate detection",
+      "5. validate",
+      "6. export csv/json/sql"
+    ]
+  },
+  "run_a": {
+    "steps": [
+      {
+        "step": "1. generate baseline",
+        "seconds": 150.5,
+        "exit_code": 0
+      },
+      {
+        "step": "2. inject labelled edge cases",
+        "seconds": 12.7,
+        "exit_code": 0
+      },
+      {
+        "step": "3. detect anomalies",
+        "seconds": 1.8,
+        "exit_code": 0
+      },
+      {
+        "step": "4. evaluate detection",
+        "seconds": 0.6,
+        "exit_code": 0
+      },
+      {
+        "step": "5. validate",
+        "seconds": 9.3,
+        "exit_code": 0
+      },
+      {
+        "step": "6. export csv/json/sql",
+        "seconds": 48.5,
+        "exit_code": 0
+      }
+    ],
+    "total_seconds": 223.4,
+    "record_counts": {
+      "customer_types": 2,
+      "reviewers": 7,
+      "kyc_requirements": 25,
+      "customers": 8000,
+      "beneficial_owners": 2222,
+      "owner_screenings": 4388,
+      "ownership_validations": 1000,
+      "company_ownership": 2234,
+      "documents": 20000,
+      "verifications": 49307,
+      "risk_ratings": 9000,
+      "onboarding_decisions": 9469,
+      "review_schedules": 8342,
+      "exceptions": 15470,
+      "review_cases": 3000,
+      "case_history": 9635,
+      "case_notes": 2326,
+      "alerts": 14076,
+      "audit_events": 139968,
+      "validation_runs": 0,
+      "validation_issues": 0,
+      "id_counters": 10500
+    },
+    "total_records": 308971,
+    "files_hashed": 51,
+    "file_sha256": {
+      "export/csv/alerts.csv": "7cd3eebfec802504867e1ecf175658630e7107885d4474780a1ad1b5178e8400",
+      "export/csv/audit_events.csv": "803cf7d4ed632d1a87404b2eb1da0a4d8f3b1677c936c18710ec3384ff6b3209",
+      "export/csv/beneficial_owners.csv": "0396eb88f6740807d9422b871f1eb70279d30bc9167af90011c08a5f9625752b",
+      "export/csv/case_history.csv": "43f1ba4483f5cb1f1031d8e12ad7882bb2edfa3cbc2aa2703e5129ab692aae92",
+      "export/csv/case_notes.csv": "03675028b453532de64205d467438526ebd2d81721ed50fa7808e81c07e5fbfc",
+      "export/csv/company_ownership.csv": "c5fd92ca9c98106c12e6414794d49eb52cda88981289918f539c9eafb7216436",
+      "export/csv/customer_types.csv": "a496e665d1d6b073a5cc764bd465e84d64a9be850a502fcb2726e8f15c3b3cad",
+      "export/csv/customers.csv": "5310736461dc8a89743ae944ca5678e42599ba2f112ec4f047651fa6d89b0640",
+      "export/csv/documents.csv": "3e059f872ec0683c4f75a4662026a32ab0e4d5f5eef471f750eb70f461acd1e5",
+      "export/csv/exceptions.csv": "41840e672099ea85d91fe09e5590cf931c6738480bde8b68a9f4555b36735da8",
+      "export/csv/id_counters.csv": "d4ec12e8977133f3dcd4be9fb468045bfee2f89dcc4654f785abeb0d0568ccdd",
+      "export/csv/kyc_requirements.csv": "4c149bc7351c06203e870474c86f33c3d77dcbe0e2bde3a23bacf0ba2f130ea4",
+      "export/csv/onboarding_decisions.csv": "792c728d6d8db7226f5d21744f921fa81e986420967649295a16b3325855438b",
+      "export/csv/owner_screenings.csv": "0afad6dafeb200f48aca09a410123a8f167946e24700c7c836516e74e8bc3255",
+      "export/csv/ownership_validations.csv": "f4137fb28c2f7b2bc15e126e33abbe6b0c5f4915798c5aeb5e4906d8920b86a2",
+      "export/csv/review_cases.csv": "cb4fe2cf1f5d9333c3f6e3ea66b79f5ec23027a8b1fdec9ad52ad705ea631388",
+      "export/csv/review_schedules.csv": "a79c7f82d76f2fdb6fe9cd14613b350d8b221e9f893d015a8431b608b9203b5c",
+      "export/csv/reviewers.csv": "45c7097749f35177ba1539d1d2e6eb471e8256ea977fe3813c920f4a82a887a3",
+      "export/csv/risk_ratings.csv": "01ad667d7ffc8fcf78afad5a3fafebf1b35b18017015ea2cdd5f09f157f7d0b7",
+      "export/csv/validation_issues.csv": "4f5764679e753f8a9b9f2cab8f8ad3c9c1ef4420d13026a16f0594c84727da98",
+      "export/csv/validation_runs.csv": "8492ccbf407b7c47e5392337e59d4c7e19fbe177c51a6843ed287089c9b889bc",
+      "export/csv/verifications.csv": "2669c76e7411171e907af82b65903bd741184a687d5fb3bdd3782be60625eadb",
+      "export/json/alerts.json": "b9f483e4d40c800a31b000d5bedf4b0003c1485b50799a95934918df042a5499",
+      "export/json/audit_events.json": "f3ba45fc2ff102a6bbb447d68fa96c7bfb35342ccbc6e4ef6b9374257f4b0e10",
+      "export/json/beneficial_owners.json": "d1edc729e5da286b915aefd1a52d45b487432e0156147660576bdaf3efb5a0e5",
+      "export/json/case_history.json": "95fef7910d88a238657c730200f31cf3e2f2135cbf0fc73178c94af8dc46b323",
+      "export/json/case_notes.json": "079bdf4896eebe73d420e4a36c65a185a11911c5336514732c49e8673ff672db",
+      "export/json/company_ownership.json": "0e63077e8e5637043ec41f6ec5f15a4f174df0408492c4d24518c7bdad68cfcc",
+      "export/json/customer_types.json": "702d63d25fc69204ea8d90e3960a293aed889c7324a382d82957832e15d6a7f2",
+      "export/json/customers.json": "370e7182d96c0683d41067b45d02c98378e93848b8d73adcc124bb24153bc2c4",
+      "export/json/documents.json": "d2d7721363c52c76325e314bbacf18e7728c8853df8d8b93cc26acb9b4ede26a",
+      "export/json/exceptions.json": "61e22d31ef7ecbd468e4aac3ee1101f63364102d1c29c0063eb7b7d7f63309fb",
+      "export/json/id_counters.json": "363c1abe2bc83c472bcfc2e6379cd922850381ffeef59d2b36a6b27b0e95f5a1",
+      "export/json/kyc_requirements.json": "cf787f011eb60a5e4e5f8d0b2a90ee0961c6241068bce9b9d0c14d85e0c5d710",
+      "export/json/onboarding_decisions.json": "def8ab4629de76fd57d6cdf87133a76cfc3e9cab08c95d0b910fa38e644d3d30",
+      "export/json/owner_screenings.json": "735fed031ebd521ad693cd29e12e1e8924ff7c3f6d333c1f8e0e95278f056275",
+      "export/json/ownership_validations.json": "26f4b8cdc021f4958ac46491f28b7b13d63233cdad3424ab7e7331cb4ae9bdc3",
+      "export/json/review_cases.json": "e273d1d09c1726499b82f513e190b82465cfc5a93061ffbb12294b0255386612",
+      "export/json/review_schedules.json": "ed5721ad7b60a91ad0f6ec733e90a28e0c6e2f95f1a977d87648076d3e0bec19",
+      "export/json/reviewers.json": "7445f6c4233e9538d7dabfa3e3b09575416497d2bc5cd31458c3d4f296f0757a",
+      "export/json/risk_ratings.json": "a6aec3565dd15f88131cde142948b7ea40d5ed6e47b4ff1ca8621851362b3188",
+      "export/json/validation_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "export/json/validation_runs.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "export/json/verifications.json": "f1b64ef00231c8a3d2c80a72f46dcb852f72085567e47f524dcae74ebc47fd90",
+      "export/sql/schema.sql": "cdd0bc5f85ca9751499556f8ed18d38b2888f370070bd8481a15a364fb99d96d",
+      "export/sql/seed.sql": "b38388ad8375e8b25ccf1407f70bb26c778d892bccafe7c14b71a9dcc814cb27",
+      "dataset/ground_truth.json": "9fa719194b772de86df77c721f5a4967c6b0b81c3dd254d0f0b6defdadbe84dd",
+      "dataset/edge_case_manifest.json": "d9ab7a1f4ac61758f820d885e58557965607513e153864b5d584c83d8d765c37",
+      "dataset/detection_results.json": "9c0c3f11dbed7c431754e39a3c8d16ddc6dddc03ef4a8665b6d165f857e81269",
+      "dataset/detection_report.json": "5e0e54445adaf5038da377cc647b1f499005dace600822f1da3e0d86c50b164b",
+      "dataset/validation_summary.json": "24521ff9944bde73d7bfff92ef33f17a63200e4d6abed1493207b21103b818bd"
+    }
+  },
+  "run_b": {
+    "steps": [
+      {
+        "step": "1. generate baseline",
+        "seconds": 144.6,
+        "exit_code": 0
+      },
+      {
+        "step": "2. inject labelled edge cases",
+        "seconds": 8.4,
+        "exit_code": 0
+      },
+      {
+        "step": "3. detect anomalies",
+        "seconds": 1.1,
+        "exit_code": 0
+      },
+      {
+        "step": "4. evaluate detection",
+        "seconds": 0.4,
+        "exit_code": 0
+      },
+      {
+        "step": "5. validate",
+        "seconds": 5.8,
+        "exit_code": 0
+      },
+      {
+        "step": "6. export csv/json/sql",
+        "seconds": 26.2,
+        "exit_code": 0
+      }
+    ],
+    "total_seconds": 186.5,
+    "record_counts": {
+      "customer_types": 2,
+      "reviewers": 7,
+      "kyc_requirements": 25,
+      "customers": 8000,
+      "beneficial_owners": 2222,
+      "owner_screenings": 4388,
+      "ownership_validations": 1000,
+      "company_ownership": 2234,
+      "documents": 20000,
+      "verifications": 49307,
+      "risk_ratings": 9000,
+      "onboarding_decisions": 9469,
+      "review_schedules": 8342,
+      "exceptions": 15470,
+      "review_cases": 3000,
+      "case_history": 9635,
+      "case_notes": 2326,
+      "alerts": 14076,
+      "audit_events": 139968,
+      "validation_runs": 0,
+      "validation_issues": 0,
+      "id_counters": 10500
+    },
+    "total_records": 308971,
+    "files_hashed": 51,
+    "file_sha256": {
+      "export/csv/alerts.csv": "7cd3eebfec802504867e1ecf175658630e7107885d4474780a1ad1b5178e8400",
+      "export/csv/audit_events.csv": "803cf7d4ed632d1a87404b2eb1da0a4d8f3b1677c936c18710ec3384ff6b3209",
+      "export/csv/beneficial_owners.csv": "0396eb88f6740807d9422b871f1eb70279d30bc9167af90011c08a5f9625752b",
+      "export/csv/case_history.csv": "43f1ba4483f5cb1f1031d8e12ad7882bb2edfa3cbc2aa2703e5129ab692aae92",
+      "export/csv/case_notes.csv": "03675028b453532de64205d467438526ebd2d81721ed50fa7808e81c07e5fbfc",
+      "export/csv/company_ownership.csv": "c5fd92ca9c98106c12e6414794d49eb52cda88981289918f539c9eafb7216436",
+      "export/csv/customer_types.csv": "a496e665d1d6b073a5cc764bd465e84d64a9be850a502fcb2726e8f15c3b3cad",
+      "export/csv/customers.csv": "5310736461dc8a89743ae944ca5678e42599ba2f112ec4f047651fa6d89b0640",
+      "export/csv/documents.csv": "3e059f872ec0683c4f75a4662026a32ab0e4d5f5eef471f750eb70f461acd1e5",
+      "export/csv/exceptions.csv": "41840e672099ea85d91fe09e5590cf931c6738480bde8b68a9f4555b36735da8",
+      "export/csv/id_counters.csv": "d4ec12e8977133f3dcd4be9fb468045bfee2f89dcc4654f785abeb0d0568ccdd",
+      "export/csv/kyc_requirements.csv": "4c149bc7351c06203e870474c86f33c3d77dcbe0e2bde3a23bacf0ba2f130ea4",
+      "export/csv/onboarding_decisions.csv": "792c728d6d8db7226f5d21744f921fa81e986420967649295a16b3325855438b",
+      "export/csv/owner_screenings.csv": "0afad6dafeb200f48aca09a410123a8f167946e24700c7c836516e74e8bc3255",
+      "export/csv/ownership_validations.csv": "f4137fb28c2f7b2bc15e126e33abbe6b0c5f4915798c5aeb5e4906d8920b86a2",
+      "export/csv/review_cases.csv": "cb4fe2cf1f5d9333c3f6e3ea66b79f5ec23027a8b1fdec9ad52ad705ea631388",
+      "export/csv/review_schedules.csv": "a79c7f82d76f2fdb6fe9cd14613b350d8b221e9f893d015a8431b608b9203b5c",
+      "export/csv/reviewers.csv": "45c7097749f35177ba1539d1d2e6eb471e8256ea977fe3813c920f4a82a887a3",
+      "export/csv/risk_ratings.csv": "01ad667d7ffc8fcf78afad5a3fafebf1b35b18017015ea2cdd5f09f157f7d0b7",
+      "export/csv/validation_issues.csv": "4f5764679e753f8a9b9f2cab8f8ad3c9c1ef4420d13026a16f0594c84727da98",
+      "export/csv/validation_runs.csv": "8492ccbf407b7c47e5392337e59d4c7e19fbe177c51a6843ed287089c9b889bc",
+      "export/csv/verifications.csv": "2669c76e7411171e907af82b65903bd741184a687d5fb3bdd3782be60625eadb",
+      "export/json/alerts.json": "b9f483e4d40c800a31b000d5bedf4b0003c1485b50799a95934918df042a5499",
+      "export/json/audit_events.json": "f3ba45fc2ff102a6bbb447d68fa96c7bfb35342ccbc6e4ef6b9374257f4b0e10",
+      "export/json/beneficial_owners.json": "d1edc729e5da286b915aefd1a52d45b487432e0156147660576bdaf3efb5a0e5",
+      "export/json/case_history.json": "95fef7910d88a238657c730200f31cf3e2f2135cbf0fc73178c94af8dc46b323",
+      "export/json/case_notes.json": "079bdf4896eebe73d420e4a36c65a185a11911c5336514732c49e8673ff672db",
+      "export/json/company_ownership.json": "0e63077e8e5637043ec41f6ec5f15a4f174df0408492c4d24518c7bdad68cfcc",
+      "export/json/customer_types.json": "702d63d25fc69204ea8d90e3960a293aed889c7324a382d82957832e15d6a7f2",
+      "export/json/customers.json": "370e7182d96c0683d41067b45d02c98378e93848b8d73adcc124bb24153bc2c4",
+      "export/json/documents.json": "d2d7721363c52c76325e314bbacf18e7728c8853df8d8b93cc26acb9b4ede26a",
+      "export/json/exceptions.json": "61e22d31ef7ecbd468e4aac3ee1101f63364102d1c29c0063eb7b7d7f63309fb",
+      "export/json/id_counters.json": "363c1abe2bc83c472bcfc2e6379cd922850381ffeef59d2b36a6b27b0e95f5a1",
+      "export/json/kyc_requirements.json": "cf787f011eb60a5e4e5f8d0b2a90ee0961c6241068bce9b9d0c14d85e0c5d710",
+      "export/json/onboarding_decisions.json": "def8ab4629de76fd57d6cdf87133a76cfc3e9cab08c95d0b910fa38e644d3d30",
+      "export/json/owner_screenings.json": "735fed031ebd521ad693cd29e12e1e8924ff7c3f6d333c1f8e0e95278f056275",
+      "export/json/ownership_validations.json": "26f4b8cdc021f4958ac46491f28b7b13d63233cdad3424ab7e7331cb4ae9bdc3",
+      "export/json/review_cases.json": "e273d1d09c1726499b82f513e190b82465cfc5a93061ffbb12294b0255386612",
+      "export/json/review_schedules.json": "ed5721ad7b60a91ad0f6ec733e90a28e0c6e2f95f1a977d87648076d3e0bec19",
+      "export/json/reviewers.json": "7445f6c4233e9538d7dabfa3e3b09575416497d2bc5cd31458c3d4f296f0757a",
+      "export/json/risk_ratings.json": "a6aec3565dd15f88131cde142948b7ea40d5ed6e47b4ff1ca8621851362b3188",
+      "export/json/validation_issues.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "export/json/validation_runs.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "export/json/verifications.json": "f1b64ef00231c8a3d2c80a72f46dcb852f72085567e47f524dcae74ebc47fd90",
+      "export/sql/schema.sql": "cdd0bc5f85ca9751499556f8ed18d38b2888f370070bd8481a15a364fb99d96d",
+      "export/sql/seed.sql": "b38388ad8375e8b25ccf1407f70bb26c778d892bccafe7c14b71a9dcc814cb27",
+      "dataset/ground_truth.json": "9fa719194b772de86df77c721f5a4967c6b0b81c3dd254d0f0b6defdadbe84dd",
+      "dataset/edge_case_manifest.json": "d9ab7a1f4ac61758f820d885e58557965607513e153864b5d584c83d8d765c37",
+      "dataset/detection_results.json": "9c0c3f11dbed7c431754e39a3c8d16ddc6dddc03ef4a8665b6d165f857e81269",
+      "dataset/detection_report.json": "5e0e54445adaf5038da377cc647b1f499005dace600822f1da3e0d86c50b164b",
+      "dataset/validation_summary.json": "24521ff9944bde73d7bfff92ef33f17a63200e4d6abed1493207b21103b818bd"
+    }
+  },
+  "comparison": {
+    "record_counts": {
+      "matching": true,
+      "tables_compared": 22,
+      "differences": []
+    },
+    "primary_ids": {
+      "matching": true,
+      "differences": []
+    },
+    "foreign_keys": {
+      "columns_compared": 41,
+      "matching": true,
+      "mismatching_columns": []
+    },
+    "field_values": {
+      "strict_identical": true,
+      "logical_identical": true,
+      "tables": [
+        {
+          "table": "customer_types",
+          "rows": 2,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "reviewers",
+          "rows": 7,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "kyc_requirements",
+          "rows": 25,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "customers",
+          "rows": 8000,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "beneficial_owners",
+          "rows": 2222,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "owner_screenings",
+          "rows": 4388,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "ownership_validations",
+          "rows": 1000,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "company_ownership",
+          "rows": 2234,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "documents",
+          "rows": 20000,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "verifications",
+          "rows": 49307,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "risk_ratings",
+          "rows": 9000,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "onboarding_decisions",
+          "rows": 9469,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "review_schedules",
+          "rows": 8342,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "exceptions",
+          "rows": 15470,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "review_cases",
+          "rows": 3000,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "case_history",
+          "rows": 9635,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "case_notes",
+          "rows": 2326,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "alerts",
+          "rows": 14076,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "audit_events",
+          "rows": 139968,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "validation_runs",
+          "rows": 0,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "validation_issues",
+          "rows": 0,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        },
+        {
+          "table": "id_counters",
+          "rows": 10500,
+          "strict_match": true,
+          "logical_match": true,
+          "differing_rows": 0,
+          "differing_columns": []
+        }
+      ]
+    },
+    "derived_values": {
+      "tables": [
+        "risk_ratings",
+        "documents",
+        "verifications",
+        "exceptions",
+        "review_cases",
+        "alerts",
+        "review_schedules",
+        "onboarding_decisions"
+      ],
+      "matching": true
+    },
+    "edge_case_records": {
+      "ground_truth_identical": true,
+      "injected_changes_identical": true,
+      "planted_issues": 310
+    },
+    "detection_results": {
+      "identical": true,
+      "report_identical": true
+    },
+    "checksums": {
+      "files_compared": 51,
+      "matching": true,
+      "differences": []
+    }
+  },
+  "matches_exported_dataset": {
+    "files_compared": 46,
+    "matching": true,
+    "mismatched": []
+  },
+  "differences": {
+    "count": 0,
+    "categories_failing": [],
+    "row_level": []
+  },
+  "overall_result": "REPRODUCIBLE: PASS",
+  "notes": [
+    "Each run uses its own fresh databases (generation, injection, detection, evaluation, validation and export), which are dropped afterwards.",
+    "Logical comparison matches rows by stable business keys and ignores database surrogate numbers; the strict comparison compares every column. Both are reported.",
+    "Step timings differ between runs by nature and are not part of the comparison."
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-10-30T16:49:23.646Z",
+  "period": {
+    "key": "all",
+    "from": null,
+    "to": "2026-10-30",
+    "label": "All time",
+    "days": null
+  },
+  "customers": {
+    "period": {
+      "key": "all",
+      "from": null,
+      "to": "2026-10-30",
+      "label": "All time",
+      "days": null
+    },
+    "totalCustomers": 50,
+    "individualCustomers": 33,
+    "companyCustomers": 17,
+    "recentlyOnboardedCustomers": 50,
+    "customersByRiskLevel": {
+      "Low": 27,
+      "Medium": 19,
+      "High": 4
+    },
+    "monthlyOnboarding": [
+      {
+        "month": "2026-05",
+        "total": 0,
+        "individual": 0,
+        "company": 0
+      },
+      {
+        "month": "2026-06",
+        "total": 0,
+        "individual": 0,
+        "company": 0
+      },
+      {
+        "month": "2026-07",
+        "total": 0,
+        "individual": 0,
+        "company": 0
+      },
+      {
+        "month": "2026-08",
+        "total": 0,
+        "individual": 0,
+        "company": 0
+      },
+      {
+        "month": "2026-09",
+        "total": 0,
+        "individual": 0,
+        "company": 0
+      },
+      {
+        "month": "2026-10",
+        "total": 50,
+        "individual": 33,
+        "company": 17
+      }
+    ]
+  },
+  "kyc": {
+    "asOf": "2026-10-30",
+    "customersEvaluated": 50,
+    "fullyCompleteCustomers": 11,
+    "partiallyCompleteCustomers": 38,
+    "notStartedCustomers": 1,
+    "customersWithNoKycDocuments": 0,
+    "averageCompletenessPercentage": 61.1,
+    "customersWithRequirements": 50,
+    "distribution": {
+      "Complete": 11,
+      "Partially Complete": 38,
+      "Not Started": 1,
+      "No Requirements": 0
+    },
+    "percentageBuckets": {
+      "0%": 1,
+      "1-49%": 14,
+      "50-99%": 24,
+      "100%": 11
+    }
+  },
+  "documents": {
+    "asOf": "2026-10-30",
+    "period": {
+      "key": "all",
+      "from": null,
+      "to": "2026-10-30",
+      "label": "All time",
+      "days": null
+    },
+    "totalDocuments": 152,
+    "verifiedDocuments": 119,
+    "pendingVerification": 19,
+    "rejectedDocuments": 7,
+    "requiresResubmission": 7,
+    "expiredDocuments": 10,
+    "documentsExpiringWithin30Days": 7,
+    "expiryWarningDays": 30,
+    "submittedInPeriod": 152,
+    "statusDistribution": {
+      "Verified": 119,
+      "Pending": 18,
+      "In Review": 1,
+      "Rejected": 7,
+      "Requires Resubmission": 7
+    }
+  },
+  "risks": {
+    "period": {
+      "key": "all",
+      "from": null,
+      "to": "2026-10-30",
+      "label": "All time",
+      "days": null
+    },
+    "lowRiskCustomers": 27,
+    "mediumRiskCustomers": 19,
+    "highRiskCustomers": 4,
+    "customersRequiringManualReview": 13,
+    "potentialPepMatches": 12,
+    "potentialSanctionsMatches": 2,
+    "assessmentsInPeriod": 82,
+    "note": "Potential matches come from simulated screening and are not confirmed matches."
+  },
+  "reviewCases": {
+    "asOf": "2026-10-30",
+    "period": {
+      "key": "all",
+      "from": null,
+      "to": "2026-10-30",
+      "label": "All time",
+      "days": null
+    },
+    "totalReviewCases": 15,
+    "openCases": 4,
+    "inProgressCases": 6,
+    "escalatedCases": 2,
+    "resolvedCases": 1,
+    "closedCases": 2,
+    "overdueCases": 3,
+    "casesOpenedInPeriod": 15,
+    "statusDistribution": {
+      "Open": 3,
+      "Assigned": 1,
+      "In Progress": 5,
+      "Pending Customer": 1,
+      "Escalated": 2,
+      "Resolved": 1,
+      "Closed": 2
+    }
+  },
+  "ownership": {
+    "totalBusinessCustomers": 17,
+    "totalBeneficialOwners": 40,
+    "ownershipValidationIssues": 5,
+    "companiesWithMissingOwnershipInformation": 2,
+    "companiesWithoutOwners": 2,
+    "companiesExceeding100Percent": 2,
+    "companiesBelow100Percent": 1
+  },
+  "alerts": {
+    "period": {
+      "key": "all",
+      "from": null,
+      "to": "2026-10-30",
+      "label": "All time",
+      "days": null
+    },
+    "alertsInPeriod": 94,
+    "activeAlerts": 89,
+    "newAlerts": 77,
+    "highOrCriticalActive": 39,
+    "bySeverity": [
+      {
+        "severity": "Critical",
+        "active": 3,
+        "closed": 0
+      },
+      {
+        "severity": "High",
+        "active": 36,
+        "closed": 1
+      },
+      {
+        "severity": "Medium",
+        "active": 41,
+        "closed": 4
+      },
+      {
+        "severity": "Low",
+        "active": 9,
+        "closed": 0
+      }
+    ],
+    "byType": [
+      {
+        "alertType": "DOCUMENT_EXPIRY",
+        "label": "Document Expiry Alert",
+        "count": 8
+      },
+      {
+        "alertType": "DOCUMENT_EXPIRED",
+        "label": "Document Expired Alert",
+        "count": 9
+      },
+      {
+        "alertType": "MISSING_MANDATORY_DOCUMENT",
+        "label": "Missing Mandatory Document Alert",
+        "count": 28
+      },
+      {
+        "alertType": "VERIFICATION_PENDING",
+        "label": "Verification Pending Alert",
+        "count": 19
+      },
+      {
+        "alertType": "HIGH_RISK_CUSTOMER",
+        "label": "High-Risk Customer Alert",
+        "count": 4
+      },
+      {
+        "alertType": "OWNERSHIP_ISSUE",
+        "label": "Ownership Issue Alert",
+        "count": 7
+      },
+      {
+        "alertType": "PERIODIC_REVIEW_DUE",
+        "label": "Periodic Review Due Alert",
+        "count": 2
+      },
+      {
+        "alertType": "PERIODIC_REVIEW_OVERDUE",
+        "label": "Periodic Review Overdue Alert",
+        "count": 3
+      },
+      {
+        "alertType": "POTENTIAL_PEP_MATCH",
+        "label": "Potential PEP Match Alert",
+        "count": 12
+      },
+      {
+        "alertType": "POTENTIAL_SANCTIONS_MATCH",
+        "label": "Potential Sanctions Match Alert",
+        "count": 2
+      }
+    ]
+  }
+}

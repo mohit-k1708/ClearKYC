@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Asha Reviewer (demo)",
+    "email": "asha.reviewer@example.com",
+    "role": "Reviewer",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Rahul Reviewer (demo)",
+    "email": "rahul.reviewer@example.com",
+    "role": "Reviewer",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Meera Admin (demo)",
+    "email": "meera.admin@example.com",
+    "role": "Admin",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "name": "Vikram Analyst (demo)",
+    "email": "vikram.analyst@example.com",
+    "role": "Analyst",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "name": "Priya Analyst (demo)",
+    "email": "priya.analyst@example.com",
+    "role": "Analyst",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "name": "Arjun Analyst (demo)",
+    "email": "arjun.analyst@example.com",
+    "role": "Analyst",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "name": "Neha Compliance (demo)",
+    "email": "neha.compliance@example.com",
+    "role": "Reviewer",
+    "is_active": true,
+    "created_at": "2023-07-19T09:00:00.000Z"
+  }
+]

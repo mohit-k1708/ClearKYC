@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "seed": 20261022,
+  "scale": "full",
+  "reference_date": "2026-10-31",
+  "totals": {
+    "planted": 310,
+    "detected": 310,
+    "tp": 310,
+    "fp": 0,
+    "fn": 0,
+    "tn": 59396,
+    "precision": 1,
+    "recall": 1,
+    "f1_score": 1,
+    "detection_rate_percent": 100
+  },
+  "by_issue_type": {
+    "APPROVED_WITH_MISSING_EVIDENCE": {
+      "planted": 50,
+      "detected": 50,
+      "tp": 50,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1265,
+      "population": 1315,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "CLOSED_WITHOUT_RESOLUTION": {
+      "planted": 50,
+      "detected": 50,
+      "tp": 50,
+      "fp": 0,
+      "fn": 0,
+      "tn": 371,
+      "population": 421,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "DOCUMENT_NAME_MISMATCH": {
+      "planted": 70,
+      "detected": 70,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19930,
+      "population": 20000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": {
+      "planted": 40,
+      "detected": 40,
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "tn": 16930,
+      "population": 16970,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "EXPIRED_DOCUMENT_MARKED_VALID": {
+      "planted": 60,
+      "detected": 60,
+      "tp": 60,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19940,
+      "population": 20000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "OWNERSHIP_OVER_100": {
+      "planted": 40,
+      "detected": 40,
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "tn": 960,
+      "population": 1000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    }
+  },
+  "missed_issues": [],
+  "false_positives": [],
+  "false_positive_review": [],
+  "integrity_checks": [
+    {
+      "name": "Every planted issue was evaluated (planted = detected planted + missed)",
+      "result": "PASS"
+    },
+    {
+      "name": "The evaluation report matches an independent recomputation from the raw files",
+      "result": "PASS"
+    },
+    {
+      "name": "The answer key was not modified after it was written (SHA-256 matches the manifest)",
+      "result": "PASS"
+    },
+    {
+      "name": "The detector source does not read the answer key or import the generator",
+      "result": "PASS"
+    },
+    {
+      "name": "The saved detection results carry no answer-key fields",
+      "result": "PASS"
+    },
+    {
+      "name": "Running the detector again gives exactly the saved results (nothing was altered)",
+      "result": "PASS"
+    },
+    {
+      "name": "Every false positive has been reviewed",
+      "result": "PASS"
+    },
+    {
+      "name": "Every missed issue is listed",
+      "result": "PASS"
+    }
+  ],
+  "metric_differences": [],
+  "detector_sources_scanned": [
+    "detector/config/detectionRules.js",
+    "detector/config/nameMatching.js",
+    "detector/detectionEngine.js",
+    "detector/detectionResults.js",
+    "detector/index.js",
+    "detector/nameMatcher.js",
+    "detector/rules/closedCaseRule.js",
+    "detector/rules/duplicateDocumentRule.js",
+    "detector/rules/expiredDocumentRule.js",
+    "detector/rules/missingEvidenceRule.js",
+    "detector/rules/nameMismatchRule.js",
+    "detector/rules/ownershipRule.js"
+  ],
+  "ground_truth_sha256": "9fa719194b772de86df77c721f5a4967c6b0b81c3dd254d0f0b6defdadbe84dd",
+  "note": "The metrics of a rule-based detector on cases planted by the same authors are expected to be high. They show that the rules find what they were built for and do not fire on the legitimate look-alikes; they do not predict accuracy on real data."
+}

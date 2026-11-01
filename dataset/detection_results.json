@@ -1,0 +1,3170 @@
+{
+  "reference_date": "2026-10-31",
+  "total_detections": 310,
+  "detections_by_type": {
+    "EXPIRED_DOCUMENT_MARKED_VALID": 60,
+    "APPROVED_WITH_MISSING_EVIDENCE": 50,
+    "OWNERSHIP_OVER_100": 40,
+    "CLOSED_WITHOUT_RESOLUTION": 50,
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": 40,
+    "DOCUMENT_NAME_MISMATCH": 70
+  },
+  "rules": [
+    {
+      "issueType": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "rule": "expiredDocumentRule",
+      "findings": 60,
+      "notes": {
+        "expiredAndVerifiedLiteralRule": 601,
+        "flagged": 60,
+        "explanation": "Expired documents that were verified BEFORE they expired are normal and are not flagged."
+      }
+    },
+    {
+      "issueType": "APPROVED_WITH_MISSING_EVIDENCE",
+      "rule": "missingEvidenceRule",
+      "findings": 50,
+      "notes": {
+        "approvedCustomers": 1315
+      }
+    },
+    {
+      "issueType": "OWNERSHIP_OVER_100",
+      "rule": "ownershipRule",
+      "findings": 40,
+      "notes": {}
+    },
+    {
+      "issueType": "CLOSED_WITHOUT_RESOLUTION",
+      "rule": "closedCaseRule",
+      "findings": 50,
+      "notes": {}
+    },
+    {
+      "issueType": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "rule": "duplicateDocumentRule",
+      "findings": 40,
+      "notes": {
+        "groupsSharedAcrossCustomers": 74
+      }
+    },
+    {
+      "issueType": "DOCUMENT_NAME_MISMATCH",
+      "rule": "nameMismatchRule",
+      "findings": 70,
+      "notes": {
+        "comparisons": 20000,
+        "byKind": {
+          "EXACT": 14912,
+          "NORMALIZED": 3786,
+          "INITIALS": 871,
+          "SIMILAR": 361,
+          "MISMATCH": 70
+        },
+        "mode": "normalized"
+      }
+    }
+  ],
+  "detections": [
+    {
+      "detection_id": "DET-000001",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000003-002",
+      "related_customer_id": "CUS-000003",
+      "description": "Address Proof expired on 2026-08-02 but was verified on 2026-09-14, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000002",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000020-003",
+      "related_customer_id": "CUS-000020",
+      "description": "Address Proof expired on 2026-04-30 but was verified on 2026-06-18, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000003",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000095-002",
+      "related_customer_id": "CUS-000095",
+      "description": "Address Proof expired on 2026-01-29 but was verified on 2026-04-02, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000004",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000271-001",
+      "related_customer_id": "CUS-000271",
+      "description": "Address Proof expired on 2026-04-22 but was verified on 2026-05-17, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000005",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000347-003",
+      "related_customer_id": "CUS-000347",
+      "description": "Address Proof expired on 2026-09-30 but was verified on 2026-10-24, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000006",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000449-001",
+      "related_customer_id": "CUS-000449",
+      "description": "Address Proof expired on 2026-04-23 but was verified on 2026-05-05, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000007",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000515-001",
+      "related_customer_id": "CUS-000515",
+      "description": "Address Proof expired on 2026-03-09 but was verified on 2026-04-19, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000008",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000623-002",
+      "related_customer_id": "CUS-000623",
+      "description": "Address Proof expired on 2026-07-28 but was verified on 2026-08-26, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000009",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000928-002",
+      "related_customer_id": "CUS-000928",
+      "description": "Address Proof expired on 2026-08-20 but was verified on 2026-09-19, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000010",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001066-003",
+      "related_customer_id": "CUS-001066",
+      "description": "Address Proof expired on 2026-05-27 but was verified on 2026-07-25, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000011",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001099-001",
+      "related_customer_id": "CUS-001099",
+      "description": "Address Proof expired on 2026-04-30 but was verified on 2026-06-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000012",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001437-003",
+      "related_customer_id": "CUS-001437",
+      "description": "Address Proof expired on 2026-03-08 but was verified on 2026-04-12, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000013",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001619-004",
+      "related_customer_id": "CUS-001619",
+      "description": "Bank Statement expired on 2026-08-25 but was verified on 2026-10-13, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000014",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001647-003",
+      "related_customer_id": "CUS-001647",
+      "description": "Bank Statement expired on 2026-09-24 but was verified on 2026-10-28, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000015",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001657-004",
+      "related_customer_id": "CUS-001657",
+      "description": "Address Proof expired on 2026-07-23 but was verified on 2026-08-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000016",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001687-001",
+      "related_customer_id": "CUS-001687",
+      "description": "Address Proof expired on 2026-07-21 but was verified on 2026-08-21, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000017",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001733-002",
+      "related_customer_id": "CUS-001733",
+      "description": "Address Proof expired on 2026-08-28 but was verified on 2026-10-26, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000018",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001981-003",
+      "related_customer_id": "CUS-001981",
+      "description": "Address Proof expired on 2026-09-13 but was verified on 2026-10-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000019",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002048-003",
+      "related_customer_id": "CUS-002048",
+      "description": "Address Proof expired on 2026-06-11 but was verified on 2026-07-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000020",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002090-004",
+      "related_customer_id": "CUS-002090",
+      "description": "Ownership Details expired on 2026-02-10 but was verified on 2026-03-18, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000021",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002115-004",
+      "related_customer_id": "CUS-002115",
+      "description": "Ownership Details expired on 2026-09-20 but was verified on 2026-10-27, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000022",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002147-003",
+      "related_customer_id": "CUS-002147",
+      "description": "Address Proof expired on 2026-05-11 but was verified on 2026-07-07, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000023",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002269-001",
+      "related_customer_id": "CUS-002269",
+      "description": "Address Proof expired on 2026-07-21 but was verified on 2026-08-18, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000024",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002423-005",
+      "related_customer_id": "CUS-002423",
+      "description": "Ownership Details expired on 2026-09-05 but was verified on 2026-10-02, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000025",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002874-003",
+      "related_customer_id": "CUS-002874",
+      "description": "Address Proof expired on 2026-08-02 but was verified on 2026-09-11, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000026",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003618-002",
+      "related_customer_id": "CUS-003618",
+      "description": "Address Proof expired on 2026-08-19 but was verified on 2026-10-17, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000027",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003653-002",
+      "related_customer_id": "CUS-003653",
+      "description": "Address Proof expired on 2026-02-17 but was verified on 2026-03-27, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000028",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003736-002",
+      "related_customer_id": "CUS-003736",
+      "description": "Address Proof expired on 2026-06-28 but was verified on 2026-08-21, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000029",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003748-002",
+      "related_customer_id": "CUS-003748",
+      "description": "Address Proof expired on 2026-04-06 but was verified on 2026-05-29, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000030",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004370-003",
+      "related_customer_id": "CUS-004370",
+      "description": "Address Proof expired on 2026-05-07 but was verified on 2026-06-02, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000031",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004406-002",
+      "related_customer_id": "CUS-004406",
+      "description": "Address Proof expired on 2026-08-13 but was verified on 2026-10-07, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000032",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004486-005",
+      "related_customer_id": "CUS-004486",
+      "description": "Financial Statements expired on 2026-08-08 but was verified on 2026-09-26, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000033",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004584-002",
+      "related_customer_id": "CUS-004584",
+      "description": "Ownership Details expired on 2026-08-18 but was verified on 2026-09-30, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000034",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004753-004",
+      "related_customer_id": "CUS-004753",
+      "description": "Address Proof expired on 2026-04-23 but was verified on 2026-05-28, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000035",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004997-002",
+      "related_customer_id": "CUS-004997",
+      "description": "Ownership Details expired on 2026-08-16 but was verified on 2026-09-13, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000036",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005045-003",
+      "related_customer_id": "CUS-005045",
+      "description": "Address Proof expired on 2026-08-02 but was verified on 2026-08-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000037",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005199-004",
+      "related_customer_id": "CUS-005199",
+      "description": "Additional Evidence expired on 2026-06-03 but was verified on 2026-07-15, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000038",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005245-002",
+      "related_customer_id": "CUS-005245",
+      "description": "Address Proof expired on 2026-05-21 but was verified on 2026-06-06, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000039",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005361-002",
+      "related_customer_id": "CUS-005361",
+      "description": "Address Proof expired on 2026-09-26 but was verified on 2026-10-12, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000040",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005428-002",
+      "related_customer_id": "CUS-005428",
+      "description": "Address Proof expired on 2026-10-05 but was verified on 2026-10-13, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000041",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005429-002",
+      "related_customer_id": "CUS-005429",
+      "description": "Address Proof expired on 2026-03-05 but was verified on 2026-04-13, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000042",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005488-002",
+      "related_customer_id": "CUS-005488",
+      "description": "Address Proof expired on 2026-05-04 but was verified on 2026-06-16, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000043",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005710-001",
+      "related_customer_id": "CUS-005710",
+      "description": "Address Proof expired on 2026-06-02 but was verified on 2026-07-15, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000044",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005833-003",
+      "related_customer_id": "CUS-005833",
+      "description": "Address Proof expired on 2026-07-23 but was verified on 2026-08-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000045",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005964-001",
+      "related_customer_id": "CUS-005964",
+      "description": "Address Proof expired on 2026-04-09 but was verified on 2026-05-19, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000046",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006056-003",
+      "related_customer_id": "CUS-006056",
+      "description": "Address Proof expired on 2026-09-07 but was verified on 2026-10-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000047",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006186-002",
+      "related_customer_id": "CUS-006186",
+      "description": "Address Proof expired on 2026-07-18 but was verified on 2026-08-14, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000048",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006228-002",
+      "related_customer_id": "CUS-006228",
+      "description": "Address Proof expired on 2026-05-11 but was verified on 2026-06-22, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000049",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006405-004",
+      "related_customer_id": "CUS-006405",
+      "description": "Address Proof expired on 2026-09-09 but was verified on 2026-10-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000050",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006543-002",
+      "related_customer_id": "CUS-006543",
+      "description": "Ownership Details expired on 2026-08-27 but was verified on 2026-09-25, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000051",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006553-002",
+      "related_customer_id": "CUS-006553",
+      "description": "Address Proof expired on 2026-08-05 but was verified on 2026-09-21, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000052",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006658-002",
+      "related_customer_id": "CUS-006658",
+      "description": "Ownership Details expired on 2026-07-29 but was verified on 2026-08-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000053",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006780-004",
+      "related_customer_id": "CUS-006780",
+      "description": "Bank Statement expired on 2026-09-04 but was verified on 2026-10-27, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000054",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006947-002",
+      "related_customer_id": "CUS-006947",
+      "description": "Address Proof expired on 2026-08-26 but was verified on 2026-09-30, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000055",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007006-002",
+      "related_customer_id": "CUS-007006",
+      "description": "Address Proof expired on 2026-08-26 but was verified on 2026-09-13, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000056",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007156-006",
+      "related_customer_id": "CUS-007156",
+      "description": "Financial Statements expired on 2026-09-21 but was verified on 2026-10-24, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000057",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007310-002",
+      "related_customer_id": "CUS-007310",
+      "description": "Address Proof expired on 2026-08-22 but was verified on 2026-09-25, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000058",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007804-002",
+      "related_customer_id": "CUS-007804",
+      "description": "Address Proof expired on 2026-10-13 but was verified on 2026-10-28, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000059",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007847-001",
+      "related_customer_id": "CUS-007847",
+      "description": "Address Proof expired on 2026-09-15 but was verified on 2026-10-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000060",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007919-001",
+      "related_customer_id": "CUS-007919",
+      "description": "Address Proof expired on 2026-09-07 but was verified on 2026-10-31, after it had expired. It must not count as valid KYC evidence.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000061",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000144",
+      "related_customer_id": "CUS-000144",
+      "description": "Approved on 2026-10-04, but mandatory evidence was not in place at that time: Address Proof (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000062",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000231",
+      "related_customer_id": "CUS-000231",
+      "description": "Approved on 2026-08-14, but mandatory evidence was not in place at that time: Address Proof (submitted but not a verified, unexpired document on that day); Bank Statement (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000063",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000342",
+      "related_customer_id": "CUS-000342",
+      "description": "Approved on 2026-07-17, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000064",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000513",
+      "related_customer_id": "CUS-000513",
+      "description": "Approved on 2026-02-12, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000065",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000523",
+      "related_customer_id": "CUS-000523",
+      "description": "Approved on 2026-09-11, but mandatory evidence was not in place at that time: Address Proof (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000066",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000555",
+      "related_customer_id": "CUS-000555",
+      "description": "Approved on 2026-10-24, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000067",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000587",
+      "related_customer_id": "CUS-000587",
+      "description": "Approved on 2026-08-27, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000068",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000704",
+      "related_customer_id": "CUS-000704",
+      "description": "Approved on 2024-04-01, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000069",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000732",
+      "related_customer_id": "CUS-000732",
+      "description": "Approved on 2026-10-27, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000070",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000842",
+      "related_customer_id": "CUS-000842",
+      "description": "Approved on 2026-06-01, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000071",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001279",
+      "related_customer_id": "CUS-001279",
+      "description": "Approved on 2026-09-01, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000072",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001569",
+      "related_customer_id": "CUS-001569",
+      "description": "Approved on 2026-08-29, but mandatory evidence was not in place at that time: Photograph (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000073",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002033",
+      "related_customer_id": "CUS-002033",
+      "description": "Approved on 2024-11-10, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000074",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002153",
+      "related_customer_id": "CUS-002153",
+      "description": "Approved on 2026-10-16, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000075",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002503",
+      "related_customer_id": "CUS-002503",
+      "description": "Approved on 2026-03-06, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000076",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002724",
+      "related_customer_id": "CUS-002724",
+      "description": "Approved on 2026-01-21, but mandatory evidence was not in place at that time: Bank Statement (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000077",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002920",
+      "related_customer_id": "CUS-002920",
+      "description": "Approved on 2026-07-17, but mandatory evidence was not in place at that time: Photograph (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000078",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002927",
+      "related_customer_id": "CUS-002927",
+      "description": "Approved on 2026-07-19, but mandatory evidence was not in place at that time: Address Proof (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000079",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003072",
+      "related_customer_id": "CUS-003072",
+      "description": "Approved on 2025-04-20, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000080",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003223",
+      "related_customer_id": "CUS-003223",
+      "description": "Approved on 2026-01-22, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000081",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003376",
+      "related_customer_id": "CUS-003376",
+      "description": "Approved on 2025-10-28, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000082",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003454",
+      "related_customer_id": "CUS-003454",
+      "description": "Approved on 2026-10-02, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000083",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003545",
+      "related_customer_id": "CUS-003545",
+      "description": "Approved on 2026-08-02, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000084",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003648",
+      "related_customer_id": "CUS-003648",
+      "description": "Approved on 2026-09-23, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000085",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004026",
+      "related_customer_id": "CUS-004026",
+      "description": "Approved on 2026-03-26, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000086",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004128",
+      "related_customer_id": "CUS-004128",
+      "description": "Approved on 2026-05-12, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000087",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004383",
+      "related_customer_id": "CUS-004383",
+      "description": "Approved on 2025-11-05, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000088",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004525",
+      "related_customer_id": "CUS-004525",
+      "description": "Approved on 2025-12-16, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000089",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004971",
+      "related_customer_id": "CUS-004971",
+      "description": "Approved on 2026-01-19, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000090",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004982",
+      "related_customer_id": "CUS-004982",
+      "description": "Approved on 2026-02-08, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000091",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005088",
+      "related_customer_id": "CUS-005088",
+      "description": "Approved on 2026-02-19, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000092",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005096",
+      "related_customer_id": "CUS-005096",
+      "description": "Approved on 2026-08-22, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000093",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005326",
+      "related_customer_id": "CUS-005326",
+      "description": "Approved on 2026-03-19, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000094",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006064",
+      "related_customer_id": "CUS-006064",
+      "description": "Approved on 2026-07-17, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000095",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006136",
+      "related_customer_id": "CUS-006136",
+      "description": "Approved on 2026-09-10, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000096",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006201",
+      "related_customer_id": "CUS-006201",
+      "description": "Approved on 2026-08-11, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000097",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006203",
+      "related_customer_id": "CUS-006203",
+      "description": "Approved on 2026-07-01, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000098",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006209",
+      "related_customer_id": "CUS-006209",
+      "description": "Approved on 2026-06-20, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000099",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006280",
+      "related_customer_id": "CUS-006280",
+      "description": "Approved on 2026-07-17, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000100",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006337",
+      "related_customer_id": "CUS-006337",
+      "description": "Approved on 2026-07-22, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000101",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006508",
+      "related_customer_id": "CUS-006508",
+      "description": "Approved on 2026-10-17, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000102",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006523",
+      "related_customer_id": "CUS-006523",
+      "description": "Approved on 2026-08-12, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000103",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006666",
+      "related_customer_id": "CUS-006666",
+      "description": "Approved on 2026-08-12, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000104",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006702",
+      "related_customer_id": "CUS-006702",
+      "description": "Approved on 2026-08-12, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000105",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006781",
+      "related_customer_id": "CUS-006781",
+      "description": "Approved on 2026-09-09, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000106",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007093",
+      "related_customer_id": "CUS-007093",
+      "description": "Approved on 2026-10-16, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000107",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007106",
+      "related_customer_id": "CUS-007106",
+      "description": "Approved on 2026-10-19, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000108",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007189",
+      "related_customer_id": "CUS-007189",
+      "description": "Approved on 2026-09-27, but mandatory evidence was not in place at that time: Photograph (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000109",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007366",
+      "related_customer_id": "CUS-007366",
+      "description": "Approved on 2026-10-17, but mandatory evidence was not in place at that time: Address Proof (not submitted).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000110",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007603",
+      "related_customer_id": "CUS-007603",
+      "description": "Approved on 2026-10-27, but mandatory evidence was not in place at that time: PAN (submitted but not a verified, unexpired document on that day).",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000111",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000195",
+      "related_customer_id": "CUS-000195",
+      "description": "The 3 beneficial owners of this company hold 109% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000112",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000196",
+      "related_customer_id": "CUS-000196",
+      "description": "The 2 beneficial owners of this company hold 125% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000113",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000334",
+      "related_customer_id": "CUS-000334",
+      "description": "The 4 beneficial owners of this company hold 107% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000114",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000459",
+      "related_customer_id": "CUS-000459",
+      "description": "The 4 beneficial owners of this company hold 108% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000115",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000507",
+      "related_customer_id": "CUS-000507",
+      "description": "The 3 beneficial owners of this company hold 111% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000116",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001146",
+      "related_customer_id": "CUS-001146",
+      "description": "The 2 beneficial owners of this company hold 119% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000117",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001361",
+      "related_customer_id": "CUS-001361",
+      "description": "The 2 beneficial owners of this company hold 111% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000118",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001484",
+      "related_customer_id": "CUS-001484",
+      "description": "The 2 beneficial owners of this company hold 110% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000119",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001612",
+      "related_customer_id": "CUS-001612",
+      "description": "The 3 beneficial owners of this company hold 107% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000120",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001638",
+      "related_customer_id": "CUS-001638",
+      "description": "The 2 beneficial owners of this company hold 117% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000121",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001642",
+      "related_customer_id": "CUS-001642",
+      "description": "The 2 beneficial owners of this company hold 113% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000122",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001910",
+      "related_customer_id": "CUS-001910",
+      "description": "The 2 beneficial owners of this company hold 109% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000123",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-001947",
+      "related_customer_id": "CUS-001947",
+      "description": "The 3 beneficial owners of this company hold 115% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000124",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002194",
+      "related_customer_id": "CUS-002194",
+      "description": "The 2 beneficial owners of this company hold 123% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000125",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002530",
+      "related_customer_id": "CUS-002530",
+      "description": "The 2 beneficial owners of this company hold 106% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000126",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002600",
+      "related_customer_id": "CUS-002600",
+      "description": "The 2 beneficial owners of this company hold 115% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000127",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002784",
+      "related_customer_id": "CUS-002784",
+      "description": "The 2 beneficial owners of this company hold 122% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000128",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-002865",
+      "related_customer_id": "CUS-002865",
+      "description": "The 2 beneficial owners of this company hold 111% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000129",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003278",
+      "related_customer_id": "CUS-003278",
+      "description": "The 4 beneficial owners of this company hold 120% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000130",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003554",
+      "related_customer_id": "CUS-003554",
+      "description": "The 2 beneficial owners of this company hold 115% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000131",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003559",
+      "related_customer_id": "CUS-003559",
+      "description": "The 2 beneficial owners of this company hold 108% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000132",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-003562",
+      "related_customer_id": "CUS-003562",
+      "description": "The 2 beneficial owners of this company hold 112% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000133",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004051",
+      "related_customer_id": "CUS-004051",
+      "description": "The 4 beneficial owners of this company hold 113% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000134",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-004438",
+      "related_customer_id": "CUS-004438",
+      "description": "The 4 beneficial owners of this company hold 107% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000135",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005019",
+      "related_customer_id": "CUS-005019",
+      "description": "The 2 beneficial owners of this company hold 111% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000136",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005101",
+      "related_customer_id": "CUS-005101",
+      "description": "The 3 beneficial owners of this company hold 117% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000137",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005183",
+      "related_customer_id": "CUS-005183",
+      "description": "The 2 beneficial owners of this company hold 119% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000138",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005423",
+      "related_customer_id": "CUS-005423",
+      "description": "The 4 beneficial owners of this company hold 123% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000139",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005485",
+      "related_customer_id": "CUS-005485",
+      "description": "The 3 beneficial owners of this company hold 113% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000140",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005610",
+      "related_customer_id": "CUS-005610",
+      "description": "The 3 beneficial owners of this company hold 118% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000141",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005739",
+      "related_customer_id": "CUS-005739",
+      "description": "The 3 beneficial owners of this company hold 119% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000142",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005814",
+      "related_customer_id": "CUS-005814",
+      "description": "The 2 beneficial owners of this company hold 109% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000143",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005863",
+      "related_customer_id": "CUS-005863",
+      "description": "The 3 beneficial owners of this company hold 108% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000144",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-005983",
+      "related_customer_id": "CUS-005983",
+      "description": "The 4 beneficial owners of this company hold 112% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000145",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006232",
+      "related_customer_id": "CUS-006232",
+      "description": "The 4 beneficial owners of this company hold 119% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000146",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006496",
+      "related_customer_id": "CUS-006496",
+      "description": "The 4 beneficial owners of this company hold 118% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000147",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-006651",
+      "related_customer_id": "CUS-006651",
+      "description": "The 4 beneficial owners of this company hold 124% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000148",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007316",
+      "related_customer_id": "CUS-007316",
+      "description": "The 2 beneficial owners of this company hold 113% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000149",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007509",
+      "related_customer_id": "CUS-007509",
+      "description": "The 4 beneficial owners of this company hold 112% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000150",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-007922",
+      "related_customer_id": "CUS-007922",
+      "description": "The 3 beneficial owners of this company hold 121% in total, which is more than 100%.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000151",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000061-2026",
+      "related_customer_id": "CUS-000061",
+      "description": "Case CASE-000531 was closed on 2026-10-02 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000152",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000121-2023",
+      "related_customer_id": "CUS-000121",
+      "description": "Case CASE-000004 was closed on 2023-12-17 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000153",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000123-2023",
+      "related_customer_id": "CUS-000123",
+      "description": "Case CASE-000002 was closed on 2023-12-19 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000154",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000284-2026",
+      "related_customer_id": "CUS-000284",
+      "description": "Case CASE-000418 was closed on 2026-10-09 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000155",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000619-2024",
+      "related_customer_id": "CUS-000619",
+      "description": "Case CASE-000021 was closed on 2024-03-26 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000156",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000784-2026",
+      "related_customer_id": "CUS-000784",
+      "description": "Case CASE-000312 was closed on 2026-04-24 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000157",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001211-2024",
+      "related_customer_id": "CUS-001211",
+      "description": "Case CASE-000056 was closed on 2024-07-07 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000158",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001341-2026",
+      "related_customer_id": "CUS-001341",
+      "description": "Case CASE-000458 was closed on 2026-08-09 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000159",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001549-2024",
+      "related_customer_id": "CUS-001549",
+      "description": "Case CASE-000062 was closed on 2024-08-25 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000160",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001604-2026",
+      "related_customer_id": "CUS-001604",
+      "description": "Case CASE-000321 was closed on 2026-07-08 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000161",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001717-2026",
+      "related_customer_id": "CUS-001717",
+      "description": "Case CASE-000574 was closed on 2026-10-15 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000162",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001726-2026",
+      "related_customer_id": "CUS-001726",
+      "description": "Case CASE-000315 was closed on 2026-06-22 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000163",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001805-2024",
+      "related_customer_id": "CUS-001805",
+      "description": "Case CASE-000074 was closed on 2024-10-20 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000164",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001817-2024",
+      "related_customer_id": "CUS-001817",
+      "description": "Case CASE-000073 was closed on 2024-10-11 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000165",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-001925-2026",
+      "related_customer_id": "CUS-001925",
+      "description": "Case CASE-000262 was closed on 2026-04-09 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000166",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002078-2024",
+      "related_customer_id": "CUS-002078",
+      "description": "Case CASE-000084 was closed on 2024-12-07 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000167",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002120-2024",
+      "related_customer_id": "CUS-002120",
+      "description": "Case CASE-000086 was closed on 2024-11-28 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000168",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002190-2024",
+      "related_customer_id": "CUS-002190",
+      "description": "Case CASE-000089 was closed on 2024-12-17 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000169",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002225-2024",
+      "related_customer_id": "CUS-002225",
+      "description": "Case CASE-000093 was closed on 2024-12-16 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000170",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002352-2024",
+      "related_customer_id": "CUS-002352",
+      "description": "Case CASE-000098 was closed on 2025-01-01 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000171",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002355-2025",
+      "related_customer_id": "CUS-002355",
+      "description": "Case CASE-000099 was closed on 2025-01-11 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000172",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002473-2025",
+      "related_customer_id": "CUS-002473",
+      "description": "Case CASE-000102 was closed on 2025-02-01 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000173",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002729-2025",
+      "related_customer_id": "CUS-002729",
+      "description": "Case CASE-000116 was closed on 2025-03-14 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000174",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002827-2025",
+      "related_customer_id": "CUS-002827",
+      "description": "Case CASE-000126 was closed on 2025-03-22 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000175",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002866-2026",
+      "related_customer_id": "CUS-002866",
+      "description": "Case CASE-000352 was closed on 2026-08-29 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000176",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002900-2026",
+      "related_customer_id": "CUS-002900",
+      "description": "Case CASE-002059 was closed on 2026-10-31 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000177",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-002939-2025",
+      "related_customer_id": "CUS-002939",
+      "description": "Case CASE-000131 was closed on 2025-04-13 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000178",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003113-2026",
+      "related_customer_id": "CUS-003113",
+      "description": "Case CASE-000532 was closed on 2026-10-16 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000179",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003135-2025",
+      "related_customer_id": "CUS-003135",
+      "description": "Case CASE-000141 was closed on 2025-05-09 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000180",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003138-2026",
+      "related_customer_id": "CUS-003138",
+      "description": "Case CASE-000359 was closed on 2026-09-01 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000181",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003367-2025",
+      "related_customer_id": "CUS-003367",
+      "description": "Case CASE-000150 was closed on 2025-06-20 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000182",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003455-2026-02",
+      "related_customer_id": "CUS-003455",
+      "description": "Case CASE-000362 was closed on 2026-08-02 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000183",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003537-2025",
+      "related_customer_id": "CUS-003537",
+      "description": "Case CASE-000158 was closed on 2025-07-20 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000184",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003686-2025",
+      "related_customer_id": "CUS-003686",
+      "description": "Case CASE-000161 was closed on 2025-08-10 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000185",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003727-2025",
+      "related_customer_id": "CUS-003727",
+      "description": "Case CASE-000214 was closed on 2026-02-18 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000186",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-003897-2026",
+      "related_customer_id": "CUS-003897",
+      "description": "Case CASE-000425 was closed on 2026-07-29 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000187",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-004294-2026",
+      "related_customer_id": "CUS-004294",
+      "description": "Case CASE-000239 was closed on 2026-02-14 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000188",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-004342-2025",
+      "related_customer_id": "CUS-004342",
+      "description": "Case CASE-000196 was closed on 2025-11-16 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000189",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-004902-2026",
+      "related_customer_id": "CUS-004902",
+      "description": "Case CASE-000547 was closed on 2026-09-25 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000190",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005135-2026",
+      "related_customer_id": "CUS-005135",
+      "description": "Case CASE-000280 was closed on 2026-02-27 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000191",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005280-2026",
+      "related_customer_id": "CUS-005280",
+      "description": "Case CASE-000281 was closed on 2026-03-06 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000192",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005623-2026",
+      "related_customer_id": "CUS-005623",
+      "description": "Case CASE-000462 was closed on 2026-07-13 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000193",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005743-2026",
+      "related_customer_id": "CUS-005743",
+      "description": "Case CASE-000351 was closed on 2026-05-10 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000194",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005765-2026",
+      "related_customer_id": "CUS-005765",
+      "description": "Case CASE-000342 was closed on 2026-05-23 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000195",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005837-2026",
+      "related_customer_id": "CUS-005837",
+      "description": "Case CASE-000540 was closed on 2026-10-24 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000196",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-005844-2026",
+      "related_customer_id": "CUS-005844",
+      "description": "Case CASE-000358 was closed on 2026-05-24 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000197",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-006720-2026",
+      "related_customer_id": "CUS-006720",
+      "description": "Case CASE-000520 was closed on 2026-08-18 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000198",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-007104-2026",
+      "related_customer_id": "CUS-007104",
+      "description": "Case CASE-000581 was closed on 2026-09-30 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000199",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-007253-2026",
+      "related_customer_id": "CUS-007253",
+      "description": "Case CASE-000594 was closed on 2026-09-30 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000200",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-007485-2026",
+      "related_customer_id": "CUS-007485",
+      "description": "Case CASE-000683 was closed on 2026-10-26 but has no documented resolution.",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000201",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000078-004",
+      "related_customer_id": "CUS-000078",
+      "description": "The same document number was already used by DOC-CUS-001759-003 of CUS-001759, a customer with no ownership link to CUS-000078. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000202",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000825-002",
+      "related_customer_id": "CUS-000825",
+      "description": "The same stored file was already used by DOC-CUS-000453-003 of CUS-000453, a customer with no ownership link to CUS-000825. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000203",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001235-003",
+      "related_customer_id": "CUS-001235",
+      "description": "The same document number was already used by DOC-CUS-006227-002 of CUS-006227, a customer with no ownership link to CUS-001235. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000204",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001369-003",
+      "related_customer_id": "CUS-001369",
+      "description": "The same document number was already used by DOC-CUS-000798-002 of CUS-000798, a customer with no ownership link to CUS-001369. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000205",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001736-003",
+      "related_customer_id": "CUS-001736",
+      "description": "The same document number was already used by DOC-CUS-001591-003 of CUS-001591, a customer with no ownership link to CUS-001736. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000206",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002319-002",
+      "related_customer_id": "CUS-002319",
+      "description": "The same document number was already used by DOC-CUS-007176-001 of CUS-007176, a customer with no ownership link to CUS-002319. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000207",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002677-003",
+      "related_customer_id": "CUS-002677",
+      "description": "The same document number was already used by DOC-CUS-005950-003 of CUS-005950, a customer with no ownership link to CUS-002677. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000208",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002741-003",
+      "related_customer_id": "CUS-002741",
+      "description": "The same document number was already used by DOC-CUS-001089-004 of CUS-001089, a customer with no ownership link to CUS-002741. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000209",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002810-002",
+      "related_customer_id": "CUS-002810",
+      "description": "The same document number was already used by DOC-CUS-004139-004 of CUS-004139, a customer with no ownership link to CUS-002810. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000210",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003043-001",
+      "related_customer_id": "CUS-003043",
+      "description": "The same document number was already used by DOC-CUS-005388-002 of CUS-005388, a customer with no ownership link to CUS-003043. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000211",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003170-004",
+      "related_customer_id": "CUS-003170",
+      "description": "The same stored file was already used by DOC-CUS-005776-003 of CUS-005776, a customer with no ownership link to CUS-003170. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000212",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003720-002",
+      "related_customer_id": "CUS-003720",
+      "description": "The same document number was already used by DOC-CUS-001783-001 of CUS-001783, a customer with no ownership link to CUS-003720. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000213",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003757-003",
+      "related_customer_id": "CUS-003757",
+      "description": "The same document number was already used by DOC-CUS-006099-003 of CUS-006099, a customer with no ownership link to CUS-003757. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000214",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004231-001",
+      "related_customer_id": "CUS-004231",
+      "description": "The same stored file was already used by DOC-CUS-007330-002 of CUS-007330, a customer with no ownership link to CUS-004231. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000215",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004407-003",
+      "related_customer_id": "CUS-004407",
+      "description": "The same document number was already used by DOC-CUS-001979-004 of CUS-001979, a customer with no ownership link to CUS-004407. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000216",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004660-003",
+      "related_customer_id": "CUS-004660",
+      "description": "The same document number was already used by DOC-CUS-005801-001 of CUS-005801, a customer with no ownership link to CUS-004660. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000217",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004827-003",
+      "related_customer_id": "CUS-004827",
+      "description": "The same document number was already used by DOC-CUS-004858-002 of CUS-004858, a customer with no ownership link to CUS-004827. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000218",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004968-001",
+      "related_customer_id": "CUS-004968",
+      "description": "The same document number was already used by DOC-CUS-004112-003 of CUS-004112, a customer with no ownership link to CUS-004968. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000219",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005013-001",
+      "related_customer_id": "CUS-005013",
+      "description": "The same stored file was already used by DOC-CUS-004408-001 of CUS-004408, a customer with no ownership link to CUS-005013. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000220",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005071-004",
+      "related_customer_id": "CUS-005071",
+      "description": "The same document number was already used by DOC-CUS-006532-003 of CUS-006532, a customer with no ownership link to CUS-005071. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000221",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005616-003",
+      "related_customer_id": "CUS-005616",
+      "description": "The same stored file was already used by DOC-CUS-000405-001 of CUS-000405, a customer with no ownership link to CUS-005616. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000222",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005721-003",
+      "related_customer_id": "CUS-005721",
+      "description": "The same document number was already used by DOC-CUS-000990-003 of CUS-000990, a customer with no ownership link to CUS-005721. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000223",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005862-002",
+      "related_customer_id": "CUS-005862",
+      "description": "The same document number was already used by DOC-CUS-006764-002 of CUS-006764, a customer with no ownership link to CUS-005862. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000224",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005966-001",
+      "related_customer_id": "CUS-005966",
+      "description": "The same document number was already used by DOC-CUS-000396-001 of CUS-000396, a customer with no ownership link to CUS-005966. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000225",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005967-001",
+      "related_customer_id": "CUS-005967",
+      "description": "The same document number was already used by DOC-CUS-007149-001 of CUS-007149, a customer with no ownership link to CUS-005967. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000226",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006019-003",
+      "related_customer_id": "CUS-006019",
+      "description": "The same document number was already used by DOC-CUS-000198-002 of CUS-000198, a customer with no ownership link to CUS-006019. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000227",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006443-002",
+      "related_customer_id": "CUS-006443",
+      "description": "The same stored file was already used by DOC-CUS-005550-001 of CUS-005550, a customer with no ownership link to CUS-006443. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000228",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006575-001",
+      "related_customer_id": "CUS-006575",
+      "description": "The same stored file was already used by DOC-CUS-001639-002 of CUS-001639, a customer with no ownership link to CUS-006575. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000229",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006647-003",
+      "related_customer_id": "CUS-006647",
+      "description": "The same document number was already used by DOC-CUS-001336-002 of CUS-001336, a customer with no ownership link to CUS-006647. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000230",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006706-004",
+      "related_customer_id": "CUS-006706",
+      "description": "The same document number was already used by DOC-CUS-005671-003 of CUS-005671, a customer with no ownership link to CUS-006706. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000231",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007111-001",
+      "related_customer_id": "CUS-007111",
+      "description": "The same stored file was already used by DOC-CUS-005125-004 of CUS-005125, a customer with no ownership link to CUS-007111. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000232",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007222-001",
+      "related_customer_id": "CUS-007222",
+      "description": "The same document number was already used by DOC-CUS-005902-001 of CUS-005902, a customer with no ownership link to CUS-007222. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000233",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007302-001",
+      "related_customer_id": "CUS-007302",
+      "description": "The same document number was already used by DOC-CUS-005054-001 of CUS-005054, a customer with no ownership link to CUS-007302. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000234",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007506-001",
+      "related_customer_id": "CUS-007506",
+      "description": "The same document number was already used by DOC-CUS-006110-001 of CUS-006110, a customer with no ownership link to CUS-007506. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000235",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007597-002",
+      "related_customer_id": "CUS-007597",
+      "description": "The same document number was already used by DOC-CUS-000371-002 of CUS-000371, a customer with no ownership link to CUS-007597. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000236",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007719-001",
+      "related_customer_id": "CUS-007719",
+      "description": "The same document number was already used by DOC-CUS-005668-001 of CUS-005668, a customer with no ownership link to CUS-007719. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000237",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007726-003",
+      "related_customer_id": "CUS-007726",
+      "description": "The same document number was already used by DOC-CUS-002932-001 of CUS-002932, a customer with no ownership link to CUS-007726. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000238",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007757-001",
+      "related_customer_id": "CUS-007757",
+      "description": "The same document number was already used by DOC-CUS-001367-001 of CUS-001367, a customer with no ownership link to CUS-007757. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000239",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007801-002",
+      "related_customer_id": "CUS-007801",
+      "description": "The same document number was already used by DOC-CUS-007484-001 of CUS-007484, a customer with no ownership link to CUS-007801. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000240",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007973-002",
+      "related_customer_id": "CUS-007973",
+      "description": "The same document number was already used by DOC-CUS-003313-003 of CUS-003313, a customer with no ownership link to CUS-007973. Possible document reuse: investigate.",
+      "severity": "HIGH",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000241",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000211-001",
+      "related_customer_id": "CUS-000211",
+      "description": "The PAN shows the name \"Imran Agarwal\" but the customer is registered as \"Kavya Agarwal\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000242",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000349-003",
+      "related_customer_id": "CUS-000349",
+      "description": "The Address Proof shows the name \"Vivaan Mishra\" but the customer is registered as \"Neel Mishra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000243",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000492-001",
+      "related_customer_id": "CUS-000492",
+      "description": "The PAN shows the name \"Tanvi Pillai\" but the customer is registered as \"Varun Pillai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000244",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000666-003",
+      "related_customer_id": "CUS-000666",
+      "description": "The Address Proof shows the name \"Rohan Mehta\" but the customer is registered as \"Aarav Agarwal\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000245",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000735-003",
+      "related_customer_id": "CUS-000735",
+      "description": "The PAN shows the name \"Yash Pillai\" but the customer is registered as \"Aditya Pillai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000246",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000758-003",
+      "related_customer_id": "CUS-000758",
+      "description": "The Address Proof shows the name \"Isha Bhatt\" but the customer is registered as \"Gauri Bhatt\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000247",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000771-001",
+      "related_customer_id": "CUS-000771",
+      "description": "The Certificate of Incorporation shows the name \"Northgate Holdings Pvt Ltd\" but the customer is registered as \"Aurora Traders Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000248",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000951-001",
+      "related_customer_id": "CUS-000951",
+      "description": "The Photograph shows the name \"Yash Shetty\" but the customer is registered as \"Kavya Nair\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000249",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000967-003",
+      "related_customer_id": "CUS-000967",
+      "description": "The Address Proof shows the name \"Tara Nair\" but the customer is registered as \"Riya Nair\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000250",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000994-002",
+      "related_customer_id": "CUS-000994",
+      "description": "The Address Proof shows the name \"Nikhil Saxena\" but the customer is registered as \"Aarav Saxena\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000251",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001213-001",
+      "related_customer_id": "CUS-001213",
+      "description": "The Photograph shows the name \"Isha Agarwal\" but the customer is registered as \"Lakshmi Malhotra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000252",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001310-003",
+      "related_customer_id": "CUS-001310",
+      "description": "The Ownership Details shows the name \"Tidewater Agro Pvt Ltd\" but the customer is registered as \"Coral Technologies Pvt Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000253",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001533-002",
+      "related_customer_id": "CUS-001533",
+      "description": "The PAN shows the name \"Varun Banerjee\" but the customer is registered as \"Pooja Thakur\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000254",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001546-003",
+      "related_customer_id": "CUS-001546",
+      "description": "The Address Proof shows the name \"Kavya Pillai\" but the customer is registered as \"Omkar Pillai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000255",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001600-002",
+      "related_customer_id": "CUS-001600",
+      "description": "The Certificate of Incorporation shows the name \"Skyline Agro Pvt Ltd\" but the customer is registered as \"Nimbus Energy Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000256",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001883-001",
+      "related_customer_id": "CUS-001883",
+      "description": "The PAN shows the name \"Isha Joshi\" but the customer is registered as \"Lakshmi Joshi\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000257",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-001940-002",
+      "related_customer_id": "CUS-001940",
+      "description": "The Photograph shows the name \"Manav Saxena\" but the customer is registered as \"Zoya Rao\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000258",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002027-001",
+      "related_customer_id": "CUS-002027",
+      "description": "The PAN shows the name \"Nikhil Patel\" but the customer is registered as \"Zoya Naidu\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000259",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002030-002",
+      "related_customer_id": "CUS-002030",
+      "description": "The PAN shows the name \"Aryan Reddy\" but the customer is registered as \"Kabir Desai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000260",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002058-001",
+      "related_customer_id": "CUS-002058",
+      "description": "The PAN shows the name \"Rohan Sharma\" but the customer is registered as \"Suresh Sharma\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000261",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002146-003",
+      "related_customer_id": "CUS-002146",
+      "description": "The Address Proof shows the name \"Riya Patel\" but the customer is registered as \"Pooja Patel\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000262",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002150-001",
+      "related_customer_id": "CUS-002150",
+      "description": "The Photograph shows the name \"Varun Shetty\" but the customer is registered as \"Nisha Shetty\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000263",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002231-004",
+      "related_customer_id": "CUS-002231",
+      "description": "The Financial Statements shows the name \"Tidewater Agro Pvt Ltd\" but the customer is registered as \"Silverline Solutions Nagpur Pvt Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000264",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002715-001",
+      "related_customer_id": "CUS-002715",
+      "description": "The PAN shows the name \"Isha Mehta\" but the customer is registered as \"Suresh Mehta\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000265",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002812-002",
+      "related_customer_id": "CUS-002812",
+      "description": "The Address Proof shows the name \"Nisha Saxena\" but the customer is registered as \"Tanvi Saxena\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000266",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002859-002",
+      "related_customer_id": "CUS-002859",
+      "description": "The PAN shows the name \"Aditya Mishra\" but the customer is registered as \"Meera Das\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000267",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-002945-003",
+      "related_customer_id": "CUS-002945",
+      "description": "The Photograph shows the name \"Divya Malhotra\" but the customer is registered as \"Varun Patel\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000268",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003239-001",
+      "related_customer_id": "CUS-003239",
+      "description": "The PAN shows the name \"Imran Chopra\" but the customer is registered as \"Varun Chopra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000269",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003298-001",
+      "related_customer_id": "CUS-003298",
+      "description": "The PAN shows the name \"Aditya Iyer\" but the customer is registered as \"Gauri Desai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000270",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003392-001",
+      "related_customer_id": "CUS-003392",
+      "description": "The Photograph shows the name \"Divya Kapoor\" but the customer is registered as \"Neel Rao\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000271",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003575-002",
+      "related_customer_id": "CUS-003575",
+      "description": "The Photograph shows the name \"Isha Patel\" but the customer is registered as \"Meera Kapoor\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000272",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003615-001",
+      "related_customer_id": "CUS-003615",
+      "description": "The Address Proof shows the name \"Dev Saxena\" but the customer is registered as \"Gauri Saxena\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000273",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003642-005",
+      "related_customer_id": "CUS-003642",
+      "description": "The Bank Statement shows the name \"Diya Das\" but the customer is registered as \"Ishaan Yadav\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000274",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003696-001",
+      "related_customer_id": "CUS-003696",
+      "description": "The PAN shows the name \"Zoya Naidu\" but the customer is registered as \"Omkar Ghosh\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000275",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003822-002",
+      "related_customer_id": "CUS-003822",
+      "description": "The Photograph shows the name \"Arjun Chopra\" but the customer is registered as \"Zoya Chopra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000276",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003842-001",
+      "related_customer_id": "CUS-003842",
+      "description": "The Address Proof shows the name \"Nisha Rao\" but the customer is registered as \"Nikhil Bhatt\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000277",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-003928-001",
+      "related_customer_id": "CUS-003928",
+      "description": "The PAN shows the name \"Yash Menon\" but the customer is registered as \"Diya Menon\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000278",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004032-001",
+      "related_customer_id": "CUS-004032",
+      "description": "The PAN shows the name \"Nikhil Mishra\" but the customer is registered as \"Diya Khan\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000279",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004082-002",
+      "related_customer_id": "CUS-004082",
+      "description": "The Photograph shows the name \"Divya Pillai\" but the customer is registered as \"Rohan Pillai\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000280",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004208-001",
+      "related_customer_id": "CUS-004208",
+      "description": "The Photograph shows the name \"Suresh Joshi\" but the customer is registered as \"Diya Ghosh\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000281",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004290-001",
+      "related_customer_id": "CUS-004290",
+      "description": "The Photograph shows the name \"Ananya Khan\" but the customer is registered as \"Kavya Khan\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000282",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004542-001",
+      "related_customer_id": "CUS-004542",
+      "description": "The Photograph shows the name \"Sneha Gupta\" but the customer is registered as \"Priyanka Bose\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000283",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004669-003",
+      "related_customer_id": "CUS-004669",
+      "description": "The Photograph shows the name \"Meera Verma\" but the customer is registered as \"Varun Iyer\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000284",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004730-002",
+      "related_customer_id": "CUS-004730",
+      "description": "The Address Proof shows the name \"Skyline Enterprises Pvt Ltd\" but the customer is registered as \"Sunrise Foods Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000285",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004806-002",
+      "related_customer_id": "CUS-004806",
+      "description": "The Photograph shows the name \"Gauri Patel\" but the customer is registered as \"Priyanka Patel\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000286",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004953-001",
+      "related_customer_id": "CUS-004953",
+      "description": "The PAN shows the name \"Ananya Sharma\" but the customer is registered as \"Ishaan Sharma\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000287",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-004956-001",
+      "related_customer_id": "CUS-004956",
+      "description": "The PAN shows the name \"Nikhil Chatterjee\" but the customer is registered as \"Omkar Mishra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000288",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005065-001",
+      "related_customer_id": "CUS-005065",
+      "description": "The PAN shows the name \"Fatima Ghosh\" but the customer is registered as \"Riya Thakur\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000289",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005277-002",
+      "related_customer_id": "CUS-005277",
+      "description": "The Photograph shows the name \"Dev Joshi\" but the customer is registered as \"Tara Joshi\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000290",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005291-003",
+      "related_customer_id": "CUS-005291",
+      "description": "The PAN shows the name \"Suresh Das\" but the customer is registered as \"Vivaan Das\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000291",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005345-001",
+      "related_customer_id": "CUS-005345",
+      "description": "The PAN shows the name \"Aryan Chatterjee\" but the customer is registered as \"Varun Agarwal\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000292",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005701-001",
+      "related_customer_id": "CUS-005701",
+      "description": "The Photograph shows the name \"Aryan Reddy\" but the customer is registered as \"Harsh Reddy\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000293",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005914-001",
+      "related_customer_id": "CUS-005914",
+      "description": "The Address Proof shows the name \"Sneha Thakur\" but the customer is registered as \"Pooja Rao\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000294",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-005936-002",
+      "related_customer_id": "CUS-005936",
+      "description": "The PAN shows the name \"Meera Pillai\" but the customer is registered as \"Manav Bhatt\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000295",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006171-001",
+      "related_customer_id": "CUS-006171",
+      "description": "The PAN shows the name \"Riya Menon\" but the customer is registered as \"Gauri Menon\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000296",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006338-001",
+      "related_customer_id": "CUS-006338",
+      "description": "The Certificate of Incorporation shows the name \"Ironbridge Motors Pvt Ltd\" but the customer is registered as \"Coral Energy Hyderabad Pvt Ltd\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000297",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006401-002",
+      "related_customer_id": "CUS-006401",
+      "description": "The Photograph shows the name \"Imran Banerjee\" but the customer is registered as \"Arjun Banerjee\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000298",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006428-001",
+      "related_customer_id": "CUS-006428",
+      "description": "The Photograph shows the name \"Nisha Malhotra\" but the customer is registered as \"Farhan Malhotra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000299",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006430-002",
+      "related_customer_id": "CUS-006430",
+      "description": "The Photograph shows the name \"Harsh Bhatt\" but the customer is registered as \"Tanvi Nair\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000300",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006513-002",
+      "related_customer_id": "CUS-006513",
+      "description": "The PAN shows the name \"Tara Khan\" but the customer is registered as \"Manav Gupta\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000301",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006823-003",
+      "related_customer_id": "CUS-006823",
+      "description": "The Address Proof shows the name \"Aarav Naidu\" but the customer is registered as \"Arjun Naidu\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000302",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006865-001",
+      "related_customer_id": "CUS-006865",
+      "description": "The PAN shows the name \"Riya Bose\" but the customer is registered as \"Zoya Ghosh\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000303",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-006933-001",
+      "related_customer_id": "CUS-006933",
+      "description": "The PAN shows the name \"Harsh Iyer\" but the customer is registered as \"Rohan Chopra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000304",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007009-003",
+      "related_customer_id": "CUS-007009",
+      "description": "The PAN shows the name \"Arjun Menon\" but the customer is registered as \"Yash Mehta\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000305",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007107-002",
+      "related_customer_id": "CUS-007107",
+      "description": "The Photograph shows the name \"Neel Desai\" but the customer is registered as \"Aarav Joshi\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000306",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007408-002",
+      "related_customer_id": "CUS-007408",
+      "description": "The PAN shows the name \"Dev Yadav\" but the customer is registered as \"Imran Malhotra\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000307",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007551-003",
+      "related_customer_id": "CUS-007551",
+      "description": "The PAN shows the name \"Aarav Mehta\" but the customer is registered as \"Meera Mehta\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000308",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007601-001",
+      "related_customer_id": "CUS-007601",
+      "description": "The PAN shows the name \"Ishaan Chatterjee\" but the customer is registered as \"Karan Chatterjee\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000309",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007668-002",
+      "related_customer_id": "CUS-007668",
+      "description": "The Address Proof shows the name \"Nisha Sharma\" but the customer is registered as \"Priyanka Nair\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    },
+    {
+      "detection_id": "DET-000310",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-007968-002",
+      "related_customer_id": "CUS-007968",
+      "description": "The Address Proof shows the name \"Nikhil Mehta\" but the customer is registered as \"Dev Mehta\". Potential name mismatch: needs manual review (not confirmed fraud).",
+      "severity": "MEDIUM",
+      "detection_timestamp": "2026-10-31T23:59:59.000Z"
+    }
+  ]
+}

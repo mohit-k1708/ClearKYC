@@ -1,0 +1,7 @@
+Alert ID,Customer ID,Alert Type,Title,Severity,Status,Related Entity Type,Related Entity ID,Created At,Due Date,Acknowledged By,Acknowledged At,Resolved By,Resolved At,Resolution Type,Resolution Notes
+ALT-000001,CUS-000002,MISSING_MANDATORY_DOCUMENT,Missing Mandatory Document: Riya Verma,Medium,New,KYCRequirement,3,2026-10-30T16:49:19.862Z,,,,,,,
+ALT-000002,CUS-000002,VERIFICATION_PENDING,Verification Pending: Riya Verma,Medium,Resolved,Document,5,2026-10-30T16:49:19.880Z,2027-07-10,,,Priya Analyst (demo),2026-10-30T16:49:22.194Z,Resolved manually,Customer supplied the missing information and the file was updated.
+ALT-000003,CUS-000003,VERIFICATION_PENDING,Verification Pending: Zoya Menon,Medium,New,Document,7,2026-10-30T16:49:19.911Z,2027-06-27,,,,,,
+ALT-000004,CUS-000004,DOCUMENT_EXPIRY,Document Expiry: Neel Joshi,Low,New,Document,10,2026-10-30T16:49:19.936Z,2026-11-03,,,,,,
+ALT-000005,CUS-000005,MISSING_MANDATORY_DOCUMENT,Missing Mandatory Document: Orchid Foods Pvt Ltd,Medium,New,KYCRequirement,19,2026-10-30T16:49:19.960Z,,,,,,,
+ALT-000006,CUS-000006,DOCUMENT_EXPIRED,Document Expired: Meera Patel,High,New,Document,16,2026-10-30T16:49:19.984Z,2026-10-12,,,,,,

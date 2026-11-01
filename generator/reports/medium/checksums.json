@@ -1,0 +1,79 @@
+{
+  "Reviewer": {
+    "rows": 7,
+    "checksum": "631248622948ea84bb7d578fb5b07ad4"
+  },
+  "KYCRequirement": {
+    "rows": 25,
+    "checksum": "741569dd284de58d0fa73a305d986f1f"
+  },
+  "Customer": {
+    "rows": 1000,
+    "checksum": "49484b01c5434d67ad778d97cda1e987"
+  },
+  "BeneficialOwner": {
+    "rows": 273,
+    "checksum": "f0f7c1d51bfe5f98c45379f38ab38a9a"
+  },
+  "OwnerScreening": {
+    "rows": 546,
+    "checksum": "5788dcec741c073060a7fb555c320869"
+  },
+  "OwnershipValidation": {
+    "rows": 125,
+    "checksum": "b0a76500ee6f0047000e27f236425ff4"
+  },
+  "Document": {
+    "rows": 2500,
+    "checksum": "19ae25654adcb734d785cee2f6e1d08a"
+  },
+  "Verification": {
+    "rows": 6188,
+    "checksum": "1759ae0137bda4a208f824001f4f537b"
+  },
+  "RiskRating": {
+    "rows": 1125,
+    "checksum": "e1c3592886e7628bd2455a8703e8981c"
+  },
+  "OnboardingDecision": {
+    "rows": 1185,
+    "checksum": "00fb6e70fb82d068ad3c3e116d3ea759"
+  },
+  "ReviewSchedule": {
+    "rows": 1053,
+    "checksum": "636f759750e85aff525ea3c0ae153aef"
+  },
+  "Exception": {
+    "rows": 1899,
+    "checksum": "72b241e23377efec7cab4262b935607c"
+  },
+  "ReviewCase": {
+    "rows": 300,
+    "checksum": "ccd9fdbba38c47ae3b5e134cdeabfa2c"
+  },
+  "CaseHistory": {
+    "rows": 956,
+    "checksum": "6ab7335ea86f185edf0048c27d02174b"
+  },
+  "CaseNote": {
+    "rows": 214,
+    "checksum": "09432f10dd11574c00116fe5afb27c0d"
+  },
+  "Alert": {
+    "rows": 1679,
+    "checksum": "91e1271df4489f4c42a57caaf191be24"
+  },
+  "AuditEvent": {
+    "rows": 17073,
+    "checksum": "fe5c2b3c0e0e3f5b3cd47dafe791ff98"
+  },
+  "CompanyOwnership": {
+    "rows": 273,
+    "checksum": "345b97bfc4536eac339052d40206e8e3"
+  },
+  "IdCounter": {
+    "rows": 1256,
+    "checksum": "0e7b2384a6d5beb82af2b04032a7a21c"
+  },
+  "dataset": "4cc8a7771fb5ab182867e43501c8e5b8"
+}

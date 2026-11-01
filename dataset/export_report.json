@@ -1,0 +1,220 @@
+{
+  "status": "EXPORTED",
+  "database": "clearkyc_pkg_full_edge",
+  "tables": [
+    {
+      "table": "CustomerType",
+      "file": "customer_types",
+      "rows": 2,
+      "columns": 2,
+      "masked_columns": []
+    },
+    {
+      "table": "Reviewer",
+      "file": "reviewers",
+      "rows": 7,
+      "columns": 6,
+      "masked_columns": []
+    },
+    {
+      "table": "KYCRequirement",
+      "file": "kyc_requirements",
+      "rows": 25,
+      "columns": 11,
+      "masked_columns": []
+    },
+    {
+      "table": "Customer",
+      "file": "customers",
+      "rows": 8000,
+      "columns": 20,
+      "masked_columns": [
+        "pan_number",
+        "aadhaar_number",
+        "pan_hash",
+        "aadhaar_hash"
+      ]
+    },
+    {
+      "table": "BeneficialOwner",
+      "file": "beneficial_owners",
+      "rows": 2222,
+      "columns": 16,
+      "masked_columns": [
+        "date_of_birth",
+        "identity_hash"
+      ]
+    },
+    {
+      "table": "OwnerScreening",
+      "file": "owner_screenings",
+      "rows": 4388,
+      "columns": 10,
+      "masked_columns": []
+    },
+    {
+      "table": "OwnershipValidation",
+      "file": "ownership_validations",
+      "rows": 1000,
+      "columns": 8,
+      "masked_columns": []
+    },
+    {
+      "table": "CompanyOwnership",
+      "file": "company_ownership",
+      "rows": 2234,
+      "columns": 11,
+      "masked_columns": []
+    },
+    {
+      "table": "Document",
+      "file": "documents",
+      "rows": 20000,
+      "columns": 19,
+      "masked_columns": [
+        "document_number",
+        "document_number_hash"
+      ]
+    },
+    {
+      "table": "Verification",
+      "file": "verifications",
+      "rows": 49307,
+      "columns": 7,
+      "masked_columns": []
+    },
+    {
+      "table": "RiskRating",
+      "file": "risk_ratings",
+      "rows": 9000,
+      "columns": 12,
+      "masked_columns": []
+    },
+    {
+      "table": "OnboardingDecision",
+      "file": "onboarding_decisions",
+      "rows": 9469,
+      "columns": 7,
+      "masked_columns": []
+    },
+    {
+      "table": "ReviewSchedule",
+      "file": "review_schedules",
+      "rows": 8342,
+      "columns": 13,
+      "masked_columns": []
+    },
+    {
+      "table": "Exception",
+      "file": "exceptions",
+      "rows": 15470,
+      "columns": 17,
+      "masked_columns": []
+    },
+    {
+      "table": "ReviewCase",
+      "file": "review_cases",
+      "rows": 3000,
+      "columns": 24,
+      "masked_columns": []
+    },
+    {
+      "table": "CaseHistory",
+      "file": "case_history",
+      "rows": 9635,
+      "columns": 8,
+      "masked_columns": []
+    },
+    {
+      "table": "CaseNote",
+      "file": "case_notes",
+      "rows": 2326,
+      "columns": 5,
+      "masked_columns": []
+    },
+    {
+      "table": "Alert",
+      "file": "alerts",
+      "rows": 14076,
+      "columns": 24,
+      "masked_columns": []
+    },
+    {
+      "table": "AuditEvent",
+      "file": "audit_events",
+      "rows": 139968,
+      "columns": 14,
+      "masked_columns": []
+    },
+    {
+      "table": "ValidationRun",
+      "file": "validation_runs",
+      "rows": 0,
+      "columns": 11,
+      "masked_columns": []
+    },
+    {
+      "table": "ValidationIssue",
+      "file": "validation_issues",
+      "rows": 0,
+      "columns": 16,
+      "masked_columns": []
+    },
+    {
+      "table": "IdCounter",
+      "file": "id_counters",
+      "rows": 10500,
+      "columns": 3,
+      "masked_columns": []
+    }
+  ],
+  "files": [
+    "csv/customer_types.csv",
+    "json/customer_types.json",
+    "csv/reviewers.csv",
+    "json/reviewers.json",
+    "csv/kyc_requirements.csv",
+    "json/kyc_requirements.json",
+    "csv/customers.csv",
+    "json/customers.json",
+    "csv/beneficial_owners.csv",
+    "json/beneficial_owners.json",
+    "csv/owner_screenings.csv",
+    "json/owner_screenings.json",
+    "csv/ownership_validations.csv",
+    "json/ownership_validations.json",
+    "csv/company_ownership.csv",
+    "json/company_ownership.json",
+    "csv/documents.csv",
+    "json/documents.json",
+    "csv/verifications.csv",
+    "json/verifications.json",
+    "csv/risk_ratings.csv",
+    "json/risk_ratings.json",
+    "csv/onboarding_decisions.csv",
+    "json/onboarding_decisions.json",
+    "csv/review_schedules.csv",
+    "json/review_schedules.json",
+    "csv/exceptions.csv",
+    "json/exceptions.json",
+    "csv/review_cases.csv",
+    "json/review_cases.json",
+    "csv/case_history.csv",
+    "json/case_history.json",
+    "csv/case_notes.csv",
+    "json/case_notes.json",
+    "csv/alerts.csv",
+    "json/alerts.json",
+    "csv/audit_events.csv",
+    "json/audit_events.json",
+    "csv/validation_runs.csv",
+    "json/validation_runs.json",
+    "csv/validation_issues.csv",
+    "json/validation_issues.json",
+    "csv/id_counters.csv",
+    "json/id_counters.json",
+    "sql/schema.sql",
+    "sql/seed.sql"
+  ],
+  "total_rows": 308971
+}

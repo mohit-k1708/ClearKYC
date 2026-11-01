@@ -1,0 +1,114 @@
+{
+  "seed": 20261022,
+  "scale": "full",
+  "reference_date": "2026-10-31",
+  "evaluation_unit": "one record plus one issue type (entity_type | entity_id | issue_type); a repeated detection of the same pair counts once",
+  "populations_for_true_negatives": {
+    "EXPIRED_DOCUMENT_MARKED_VALID": 20000,
+    "APPROVED_WITH_MISSING_EVIDENCE": 1315,
+    "OWNERSHIP_OVER_100": 1000,
+    "CLOSED_WITHOUT_RESOLUTION": 421,
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": 16970,
+    "DOCUMENT_NAME_MISMATCH": 20000
+  },
+  "totals": {
+    "planted": 310,
+    "detected": 310,
+    "tp": 310,
+    "fp": 0,
+    "fn": 0,
+    "tn": 59396,
+    "precision": 1,
+    "recall": 1,
+    "f1_score": 1,
+    "detection_rate_percent": 100
+  },
+  "by_issue_type": {
+    "APPROVED_WITH_MISSING_EVIDENCE": {
+      "planted": 50,
+      "detected": 50,
+      "tp": 50,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1265,
+      "population": 1315,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "CLOSED_WITHOUT_RESOLUTION": {
+      "planted": 50,
+      "detected": 50,
+      "tp": 50,
+      "fp": 0,
+      "fn": 0,
+      "tn": 371,
+      "population": 421,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "DOCUMENT_NAME_MISMATCH": {
+      "planted": 70,
+      "detected": 70,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19930,
+      "population": 20000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": {
+      "planted": 40,
+      "detected": 40,
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "tn": 16930,
+      "population": 16970,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "EXPIRED_DOCUMENT_MARKED_VALID": {
+      "planted": 60,
+      "detected": 60,
+      "tp": 60,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19940,
+      "population": 20000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    },
+    "OWNERSHIP_OVER_100": {
+      "planted": 40,
+      "detected": 40,
+      "tp": 40,
+      "fp": 0,
+      "fn": 0,
+      "tn": 960,
+      "population": 1000,
+      "precision": 1,
+      "recall": 1,
+      "f1_score": 1,
+      "detection_rate_percent": 100
+    }
+  },
+  "missed_issues": [],
+  "false_positives": [],
+  "notes": [
+    "Precision = TP / (TP + FP); Recall = TP / (TP + FN); F1 = 2 x Precision x Recall / (Precision + Recall); Detection rate = detected planted issues / planted issues x 100. A zero denominator gives 0.",
+    "True negatives = evaluated records of that issue type (see populations_for_true_negatives) minus TP, FP and FN.",
+    "The answer key was read only by this script, after detection had finished. It did not change the detector results.",
+    "Detection of EXPIRED_DOCUMENT_MARKED_VALID requires the Verified decision to be recorded after the expiry date. Documents that expired after a correct verification are ordinary and are not planted issues; see documentation/edge_case_rules.md."
+  ]
+}

@@ -1,0 +1,7 @@
+Case ID,Customer ID,Case Title,Case Type,Priority,Status,Assigned Analyst,Assigned Reviewer,Due Date,Overdue,Requires Approval,Created At,Resolved At,Closed At
+CASE-000001,CUS-000011,Periodic KYC review (cycle 1),Periodic KYC Review,High,Open,,,2026-09-07,Yes,No,2026-10-30T16:49:13.100Z,,
+CASE-000002,CUS-000027,Periodic KYC review (cycle 1),Periodic KYC Review,Critical,In Progress,Vikram Analyst (demo),,2026-07-14,Yes,Yes,2026-10-30T16:49:14.086Z,,
+CASE-000003,CUS-000028,Periodic KYC review (cycle 1),Periodic KYC Review,Medium,Open,,,2026-10-02,Yes,No,2026-10-30T16:49:14.152Z,,
+CASE-000004,CUS-000038,Mandatory document missing: Granite Exports Pvt Ltd,Missing Documents,Medium,In Progress,Priya Analyst (demo),,2026-11-13,No,No,2026-10-30T16:49:15.261Z,,
+CASE-000005,CUS-000044,Mandatory document missing: Ananya Rao,Missing Documents,Medium,Pending Customer,Vikram Analyst (demo),,2026-11-13,No,No,2026-10-30T16:49:15.460Z,,
+CASE-000006,CUS-000020,Document expired: Sunrise Foods Pvt Ltd,Expired Documents,High,In Progress,Vikram Analyst (demo),,2026-11-06,No,No,2026-10-30T16:49:15.604Z,,

@@ -1,0 +1,544 @@
+{
+  "database": "clearkyc",
+  "reference_date": "2026-10-31",
+  "read_only_inspection": true,
+  "dataset_size": {
+    "customers": 50,
+    "documents": 152,
+    "review_cases": 15
+  },
+  "note": "Anomalies planted earlier by the scene seed scripts. Kept apart from ground_truth.json (the answer key of the edge-case dataset). covered_by_detector says whether one of the six Phase 3 rules is built to find the issue type; for EXPIRED_DOCUMENT_MARKED_VALID it is true only when the Verified decision was recorded after the expiry date.",
+  "not_labelled": [
+    "Documents that are simply Pending / In Review / expiring soon, mandatory documents not yet submitted, upcoming reviews and potential PEP / sanctions matches under review: ordinary workflow conditions that the application already tracks as exceptions, not errors."
+  ],
+  "total_issues": 33,
+  "issues_by_type": {
+    "DOCUMENT_REQUIRES_RESUBMISSION": 7,
+    "EXPIRED_DOCUMENT_MARKED_VALID": 10,
+    "MISSING_BENEFICIAL_OWNERS": 2,
+    "OVERDUE_PERIODIC_REVIEW": 3,
+    "OWNERSHIP_BELOW_100": 1,
+    "OWNERSHIP_OVER_100": 2,
+    "REJECTED_DOCUMENT": 7,
+    "REVIEW_CLOSED_ISSUE_PERSISTS": 1
+  },
+  "issues": [
+    {
+      "issue_id": "LEGACY-000001",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000001-002",
+      "related_customer_id": "CUS-000001",
+      "severity": "MEDIUM",
+      "description": "Address Proof is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000002",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000010-003",
+      "related_customer_id": "CUS-000010",
+      "severity": "MEDIUM",
+      "description": "Address Proof is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000003",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000017-001",
+      "related_customer_id": "CUS-000017",
+      "severity": "MEDIUM",
+      "description": "Certificate of Incorporation is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000004",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000022-003",
+      "related_customer_id": "CUS-000022",
+      "severity": "MEDIUM",
+      "description": "Photograph is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000005",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000031-001",
+      "related_customer_id": "CUS-000031",
+      "severity": "MEDIUM",
+      "description": "PAN is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000006",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000042-003",
+      "related_customer_id": "CUS-000042",
+      "severity": "MEDIUM",
+      "description": "Photograph is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000007",
+      "issue_type": "DOCUMENT_REQUIRES_RESUBMISSION",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000043-002",
+      "related_customer_id": "CUS-000043",
+      "severity": "MEDIUM",
+      "description": "Business PAN is Requires Resubmission.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Requires Resubmission"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000008",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000006-002",
+      "related_customer_id": "CUS-000006",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-10-12 yet its newest verification is still Verified (verified 2026-10-01).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-10-12",
+        "verified_on": "2026-10-01",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000009",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000006-004",
+      "related_customer_id": "CUS-000006",
+      "severity": "HIGH",
+      "description": "Bank Statement expired on 2026-08-23 yet its newest verification is still Verified (verified 2026-07-04).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-08-23",
+        "verified_on": "2026-07-04",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000010",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000013-002",
+      "related_customer_id": "CUS-000013",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-09-17 yet its newest verification is still Verified (verified 2026-08-22).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-09-17",
+        "verified_on": "2026-08-22",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000011",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000020-003",
+      "related_customer_id": "CUS-000020",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-10-01 yet its newest verification is still Verified (verified 2026-04-23).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-10-01",
+        "verified_on": "2026-04-23",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000012",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000024-002",
+      "related_customer_id": "CUS-000024",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-09-25 yet its newest verification is still Verified (verified 2026-09-23).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-09-25",
+        "verified_on": "2026-09-23",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000013",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000033-004",
+      "related_customer_id": "CUS-000033",
+      "severity": "HIGH",
+      "description": "Ownership Details expired on 2026-08-27 yet its newest verification is still Verified (verified 2026-05-31).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-08-27",
+        "verified_on": "2026-05-31",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000014",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000040-002",
+      "related_customer_id": "CUS-000040",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-09-08 yet its newest verification is still Verified (verified 2026-07-03).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-09-08",
+        "verified_on": "2026-07-03",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000015",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000046-003",
+      "related_customer_id": "CUS-000046",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-10-24 yet its newest verification is still Verified (verified 2025-12-02).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-10-24",
+        "verified_on": "2025-12-02",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000016",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000049-002",
+      "related_customer_id": "CUS-000049",
+      "severity": "HIGH",
+      "description": "Address Proof expired on 2026-08-30 yet its newest verification is still Verified (verified 2026-08-04).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-08-30",
+        "verified_on": "2026-08-04",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000017",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000050-004",
+      "related_customer_id": "CUS-000050",
+      "severity": "HIGH",
+      "description": "Ownership Details expired on 2026-10-04 yet its newest verification is still Verified (verified 2026-07-08).",
+      "source_scenario": "EXPIRED (verified_expired)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "expiry_date": "2026-10-04",
+        "verified_on": "2026-07-08",
+        "verified_after_expiry": false
+      }
+    },
+    {
+      "issue_id": "LEGACY-000018",
+      "issue_type": "MISSING_BENEFICIAL_OWNERS",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000012",
+      "related_customer_id": "CUS-000012",
+      "severity": "MEDIUM",
+      "description": "The company has no beneficial owners recorded.",
+      "source_scenario": "NO_OWNERS",
+      "source_script": "scripts/generateOwnershipData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "owners": 0
+      }
+    },
+    {
+      "issue_id": "LEGACY-000019",
+      "issue_type": "MISSING_BENEFICIAL_OWNERS",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000045",
+      "related_customer_id": "CUS-000045",
+      "severity": "MEDIUM",
+      "description": "The company has no beneficial owners recorded.",
+      "source_scenario": "NO_OWNERS",
+      "source_script": "scripts/generateOwnershipData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "owners": 0
+      }
+    },
+    {
+      "issue_id": "LEGACY-000020",
+      "issue_type": "OVERDUE_PERIODIC_REVIEW",
+      "entity_type": "ReviewSchedule",
+      "entity_id": "CUS-000011/cycle-1",
+      "related_customer_id": "CUS-000011",
+      "severity": "MEDIUM",
+      "description": "The periodic review was due on 2026-09-07.",
+      "source_scenario": "overdue by 20 / 45 / 100 days",
+      "source_script": "scripts/generateReviewData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "next_review_date": "2026-09-07"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000021",
+      "issue_type": "OVERDUE_PERIODIC_REVIEW",
+      "entity_type": "ReviewSchedule",
+      "entity_id": "CUS-000027/cycle-1",
+      "related_customer_id": "CUS-000027",
+      "severity": "MEDIUM",
+      "description": "The periodic review was due on 2026-07-14.",
+      "source_scenario": "overdue by 20 / 45 / 100 days",
+      "source_script": "scripts/generateReviewData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "next_review_date": "2026-07-14"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000022",
+      "issue_type": "OVERDUE_PERIODIC_REVIEW",
+      "entity_type": "ReviewSchedule",
+      "entity_id": "CUS-000028/cycle-1",
+      "related_customer_id": "CUS-000028",
+      "severity": "MEDIUM",
+      "description": "The periodic review was due on 2026-10-02.",
+      "source_scenario": "overdue by 20 / 45 / 100 days",
+      "source_script": "scripts/generateReviewData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "next_review_date": "2026-10-02"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000023",
+      "issue_type": "OWNERSHIP_BELOW_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000015",
+      "related_customer_id": "CUS-000015",
+      "severity": "MEDIUM",
+      "description": "Owners hold only 70% in total.",
+      "source_scenario": "UNDER_100 (40% + 30%)",
+      "source_script": "scripts/generateOwnershipData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "total_percentage": 70
+      }
+    },
+    {
+      "issue_id": "LEGACY-000024",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000010",
+      "related_customer_id": "CUS-000010",
+      "severity": "HIGH",
+      "description": "Owners hold 110% in total.",
+      "source_scenario": "OVER_100 (60% + 50%)",
+      "source_script": "scripts/generateOwnershipData.js",
+      "covered_by_detector": true,
+      "evidence": {
+        "total_percentage": 110,
+        "owners": 2
+      }
+    },
+    {
+      "issue_id": "LEGACY-000025",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "entity_type": "Customer",
+      "entity_id": "CUS-000038",
+      "related_customer_id": "CUS-000038",
+      "severity": "HIGH",
+      "description": "Owners hold 110% in total.",
+      "source_scenario": "OVER_100 (60% + 50%)",
+      "source_script": "scripts/generateOwnershipData.js",
+      "covered_by_detector": true,
+      "evidence": {
+        "total_percentage": 110,
+        "owners": 2
+      }
+    },
+    {
+      "issue_id": "LEGACY-000026",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000001-001",
+      "related_customer_id": "CUS-000001",
+      "severity": "MEDIUM",
+      "description": "PAN is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000027",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000010-001",
+      "related_customer_id": "CUS-000010",
+      "severity": "MEDIUM",
+      "description": "Certificate of Incorporation is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000028",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000017-002",
+      "related_customer_id": "CUS-000017",
+      "severity": "MEDIUM",
+      "description": "Business PAN is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000029",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000022-002",
+      "related_customer_id": "CUS-000022",
+      "severity": "MEDIUM",
+      "description": "Address Proof is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000030",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000031-003",
+      "related_customer_id": "CUS-000031",
+      "severity": "MEDIUM",
+      "description": "Photograph is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000031",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000042-002",
+      "related_customer_id": "CUS-000042",
+      "severity": "MEDIUM",
+      "description": "Address Proof is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000032",
+      "issue_type": "REJECTED_DOCUMENT",
+      "entity_type": "Document",
+      "entity_id": "DOC-CUS-000043-003",
+      "related_customer_id": "CUS-000043",
+      "severity": "MEDIUM",
+      "description": "Address Proof is Rejected.",
+      "source_scenario": "REJECTED (rejected / resubmit)",
+      "source_script": "scripts/generateKycData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "status": "Rejected"
+      }
+    },
+    {
+      "issue_id": "LEGACY-000033",
+      "issue_type": "REVIEW_CLOSED_ISSUE_PERSISTS",
+      "entity_type": "ReviewCase",
+      "entity_id": "REV-CUS-000017-2026",
+      "related_customer_id": "CUS-000017",
+      "severity": "MEDIUM",
+      "description": "The case was closed while exception EXC-000039 is still active.",
+      "source_scenario": "thirteenth case: closed while the issue persists",
+      "source_script": "scripts/generateReviewData.js",
+      "covered_by_detector": false,
+      "evidence": {
+        "exception": "EXC-000039"
+      }
+    }
+  ]
+}

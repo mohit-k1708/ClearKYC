@@ -1,0 +1,4190 @@
+{
+  "schema_version": 1,
+  "seed": 20261022,
+  "scale": "full",
+  "reference_date": "2026-10-31",
+  "baseline_check": {
+    "detections_in_baseline": 0,
+    "per_rule": [
+      {
+        "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+        "flagged": 0
+      },
+      {
+        "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+        "flagged": 0
+      },
+      {
+        "issue_type": "OWNERSHIP_OVER_100",
+        "flagged": 0
+      },
+      {
+        "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+        "flagged": 0
+      },
+      {
+        "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+        "flagged": 0
+      },
+      {
+        "issue_type": "DOCUMENT_NAME_MISMATCH",
+        "flagged": 0
+      }
+    ]
+  },
+  "plan": {
+    "EXPIRED_DOCUMENT_MARKED_VALID": {
+      "requested": 60,
+      "injected": 60,
+      "shortfall": 0
+    },
+    "APPROVED_WITH_MISSING_EVIDENCE": {
+      "requested": 50,
+      "injected": 50,
+      "shortfall": 0
+    },
+    "OWNERSHIP_OVER_100": {
+      "requested": 40,
+      "injected": 40,
+      "shortfall": 0
+    },
+    "CLOSED_WITHOUT_RESOLUTION": {
+      "requested": 50,
+      "injected": 50,
+      "shortfall": 0
+    },
+    "DOCUMENT_REUSED_ACROSS_CUSTOMERS": {
+      "requested": 40,
+      "injected": 40,
+      "shortfall": 0
+    },
+    "DOCUMENT_NAME_MISMATCH": {
+      "requested": 70,
+      "injected": 70,
+      "shortfall": 0
+    }
+  },
+  "relaxed_constraints_in_edge_database_only": [
+    {
+      "table": "ReviewCase",
+      "constraint": "ReviewCase_resolution_notes_check",
+      "reason": "A Closed case without resolution notes is impossible while this check exists."
+    }
+  ],
+  "negative_controls": {
+    "look_alikes_in_dataset": {
+      "documents_expired_after_a_correct_verification": 541,
+      "documents_with_a_legitimate_name_variant": 5088,
+      "approvals_total": 1315
+    },
+    "shared_documents_between_related_companies": [
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000427-005",
+        "shared_by_document": "DOC-CUS-000582-004",
+        "customer_ids": [
+          427,
+          582
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-005331-005",
+        "shared_by_document": "DOC-CUS-007868-004",
+        "customer_ids": [
+          5331,
+          7868
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000659-007",
+        "shared_by_document": "DOC-CUS-006156-002",
+        "customer_ids": [
+          659,
+          6156
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-002605-004",
+        "shared_by_document": "DOC-CUS-002338-005",
+        "customer_ids": [
+          2338,
+          2605
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000120-003",
+        "shared_by_document": "DOC-CUS-001197-003",
+        "customer_ids": [
+          120,
+          1197
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-001273-003",
+        "shared_by_document": "DOC-CUS-002402-007",
+        "customer_ids": [
+          1273,
+          2402
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000607-001",
+        "shared_by_document": "DOC-CUS-000615-004",
+        "customer_ids": [
+          607,
+          615
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000888-004",
+        "shared_by_document": "DOC-CUS-002673-004",
+        "customer_ids": [
+          888,
+          2673
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-003381-003",
+        "shared_by_document": "DOC-CUS-000403-002",
+        "customer_ids": [
+          403,
+          3381
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-001165-004",
+        "shared_by_document": "DOC-CUS-001803-003",
+        "customer_ids": [
+          1165,
+          1803
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-001396-003",
+        "shared_by_document": "DOC-CUS-001579-001",
+        "customer_ids": [
+          1396,
+          1579
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000499-002",
+        "shared_by_document": "DOC-CUS-000028-004",
+        "customer_ids": [
+          28,
+          499
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000468-002",
+        "shared_by_document": "DOC-CUS-003476-006",
+        "customer_ids": [
+          468,
+          3476
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000628-001",
+        "shared_by_document": "DOC-CUS-000094-003",
+        "customer_ids": [
+          94,
+          628
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-005129-002",
+        "shared_by_document": "DOC-CUS-003947-004",
+        "customer_ids": [
+          3947,
+          5129
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000432-004",
+        "shared_by_document": "DOC-CUS-001239-004",
+        "customer_ids": [
+          432,
+          1239
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000269-002",
+        "shared_by_document": "DOC-CUS-000126-003",
+        "customer_ids": [
+          126,
+          269
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-000007-002",
+        "shared_by_document": "DOC-CUS-000959-003",
+        "customer_ids": [
+          7,
+          959
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-001266-003",
+        "shared_by_document": "DOC-CUS-002526-001",
+        "customer_ids": [
+          1266,
+          2526
+        ]
+      },
+      {
+        "kind": "shared_document_related_companies",
+        "original_document": "DOC-CUS-001059-002",
+        "shared_by_document": "DOC-CUS-000622-003",
+        "customer_ids": [
+          622,
+          1059
+        ]
+      }
+    ]
+  },
+  "changes": [
+    {
+      "issue_id": "ISSUE-000001",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002269-001",
+      "before": {
+        "issue_date": "2026-07-23",
+        "expiry_date": "2027-07-23"
+      },
+      "after": {
+        "issue_date": "2025-07-21",
+        "expiry_date": "2026-07-21"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000002",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001687-001",
+      "before": {
+        "issue_date": "2026-08-13",
+        "expiry_date": "2027-08-13"
+      },
+      "after": {
+        "issue_date": "2025-07-21",
+        "expiry_date": "2026-07-21"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000003",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001647-003",
+      "before": {
+        "issue_date": "2026-10-03",
+        "expiry_date": "2027-04-01"
+      },
+      "after": {
+        "issue_date": "2026-03-28",
+        "expiry_date": "2026-09-24"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000004",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005964-001",
+      "before": {
+        "issue_date": "2026-04-22",
+        "expiry_date": "2027-04-22"
+      },
+      "after": {
+        "issue_date": "2025-04-09",
+        "expiry_date": "2026-04-09"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000005",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006056-003",
+      "before": {
+        "issue_date": "2026-10-24",
+        "expiry_date": "2027-10-24"
+      },
+      "after": {
+        "issue_date": "2025-09-07",
+        "expiry_date": "2026-09-07"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000006",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004997-002",
+      "before": {
+        "issue_date": "2026-08-01",
+        "expiry_date": "2027-08-01"
+      },
+      "after": {
+        "issue_date": "2025-08-16",
+        "expiry_date": "2026-08-16"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000007",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005245-002",
+      "before": {
+        "issue_date": "2026-06-05",
+        "expiry_date": "2027-06-05"
+      },
+      "after": {
+        "issue_date": "2025-05-21",
+        "expiry_date": "2026-05-21"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000008",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005199-004",
+      "before": {
+        "issue_date": "2026-05-30",
+        "expiry_date": "2027-05-30"
+      },
+      "after": {
+        "issue_date": "2025-06-03",
+        "expiry_date": "2026-06-03"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000009",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005710-001",
+      "before": {
+        "issue_date": "2026-06-20",
+        "expiry_date": "2027-06-20"
+      },
+      "after": {
+        "issue_date": "2025-06-02",
+        "expiry_date": "2026-06-02"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000010",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001099-001",
+      "before": {
+        "issue_date": "2026-06-10",
+        "expiry_date": "2027-06-10"
+      },
+      "after": {
+        "issue_date": "2025-04-30",
+        "expiry_date": "2026-04-30"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000011",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005045-003",
+      "before": {
+        "issue_date": "2026-07-14",
+        "expiry_date": "2027-07-14"
+      },
+      "after": {
+        "issue_date": "2025-08-02",
+        "expiry_date": "2026-08-02"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000012",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-003748-002",
+      "before": {
+        "issue_date": "2026-05-01",
+        "expiry_date": "2027-05-01"
+      },
+      "after": {
+        "issue_date": "2025-04-06",
+        "expiry_date": "2026-04-06"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000013",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007919-001",
+      "before": {
+        "issue_date": "2026-10-28",
+        "expiry_date": "2027-10-28"
+      },
+      "after": {
+        "issue_date": "2025-09-07",
+        "expiry_date": "2026-09-07"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000014",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000928-002",
+      "before": {
+        "issue_date": "2026-08-18",
+        "expiry_date": "2027-08-18"
+      },
+      "after": {
+        "issue_date": "2025-08-20",
+        "expiry_date": "2026-08-20"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000015",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005488-002",
+      "before": {
+        "issue_date": "2026-05-30",
+        "expiry_date": "2027-05-30"
+      },
+      "after": {
+        "issue_date": "2025-05-04",
+        "expiry_date": "2026-05-04"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000016",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000095-002",
+      "before": {
+        "issue_date": "2026-03-27",
+        "expiry_date": "2027-03-27"
+      },
+      "after": {
+        "issue_date": "2025-01-29",
+        "expiry_date": "2026-01-29"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000017",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005361-002",
+      "before": {
+        "issue_date": "2026-10-05",
+        "expiry_date": "2027-10-05"
+      },
+      "after": {
+        "issue_date": "2025-09-26",
+        "expiry_date": "2026-09-26"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000018",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000347-003",
+      "before": {
+        "issue_date": "2026-10-07",
+        "expiry_date": "2027-10-07"
+      },
+      "after": {
+        "issue_date": "2025-09-30",
+        "expiry_date": "2026-09-30"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000019",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002048-003",
+      "before": {
+        "issue_date": "2026-07-02",
+        "expiry_date": "2027-07-02"
+      },
+      "after": {
+        "issue_date": "2025-06-11",
+        "expiry_date": "2026-06-11"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000020",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000003-002",
+      "before": {
+        "issue_date": "2026-08-11",
+        "expiry_date": "2027-08-11"
+      },
+      "after": {
+        "issue_date": "2025-08-02",
+        "expiry_date": "2026-08-02"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000021",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-003736-002",
+      "before": {
+        "issue_date": "2026-08-05",
+        "expiry_date": "2027-08-05"
+      },
+      "after": {
+        "issue_date": "2025-06-28",
+        "expiry_date": "2026-06-28"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000022",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007847-001",
+      "before": {
+        "issue_date": "2026-10-27",
+        "expiry_date": "2027-10-27"
+      },
+      "after": {
+        "issue_date": "2025-09-15",
+        "expiry_date": "2026-09-15"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000023",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006228-002",
+      "before": {
+        "issue_date": "2026-06-02",
+        "expiry_date": "2027-06-02"
+      },
+      "after": {
+        "issue_date": "2025-05-11",
+        "expiry_date": "2026-05-11"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000024",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004486-005",
+      "before": {
+        "issue_date": "2026-09-02",
+        "expiry_date": "2027-09-02"
+      },
+      "after": {
+        "issue_date": "2025-08-08",
+        "expiry_date": "2026-08-08"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000025",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006780-004",
+      "before": {
+        "issue_date": "2026-10-01",
+        "expiry_date": "2027-03-30"
+      },
+      "after": {
+        "issue_date": "2026-03-08",
+        "expiry_date": "2026-09-04"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000026",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001733-002",
+      "before": {
+        "issue_date": "2026-09-18",
+        "expiry_date": "2027-09-18"
+      },
+      "after": {
+        "issue_date": "2025-08-28",
+        "expiry_date": "2026-08-28"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000027",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001619-004",
+      "before": {
+        "issue_date": "2026-09-24",
+        "expiry_date": "2027-03-23"
+      },
+      "after": {
+        "issue_date": "2026-02-26",
+        "expiry_date": "2026-08-25"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000028",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-003618-002",
+      "before": {
+        "issue_date": "2026-10-05",
+        "expiry_date": "2027-10-05"
+      },
+      "after": {
+        "issue_date": "2025-08-19",
+        "expiry_date": "2026-08-19"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000029",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004753-004",
+      "before": {
+        "issue_date": "2026-04-13",
+        "expiry_date": "2027-04-13"
+      },
+      "after": {
+        "issue_date": "2025-04-23",
+        "expiry_date": "2026-04-23"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000030",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007310-002",
+      "before": {
+        "issue_date": "2026-09-03",
+        "expiry_date": "2027-09-03"
+      },
+      "after": {
+        "issue_date": "2025-08-22",
+        "expiry_date": "2026-08-22"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000031",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005429-002",
+      "before": {
+        "issue_date": "2026-04-10",
+        "expiry_date": "2027-04-10"
+      },
+      "after": {
+        "issue_date": "2025-03-05",
+        "expiry_date": "2026-03-05"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000032",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006405-004",
+      "before": {
+        "issue_date": "2026-10-08",
+        "expiry_date": "2027-10-08"
+      },
+      "after": {
+        "issue_date": "2025-09-09",
+        "expiry_date": "2026-09-09"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000033",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007156-006",
+      "before": {
+        "issue_date": "2026-10-12",
+        "expiry_date": "2027-10-12"
+      },
+      "after": {
+        "issue_date": "2025-09-21",
+        "expiry_date": "2026-09-21"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000034",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004406-002",
+      "before": {
+        "issue_date": "2026-09-10",
+        "expiry_date": "2027-09-10"
+      },
+      "after": {
+        "issue_date": "2025-08-13",
+        "expiry_date": "2026-08-13"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000035",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005833-003",
+      "before": {
+        "issue_date": "2026-08-09",
+        "expiry_date": "2027-08-09"
+      },
+      "after": {
+        "issue_date": "2025-07-23",
+        "expiry_date": "2026-07-23"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000036",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002090-004",
+      "before": {
+        "issue_date": "2026-03-07",
+        "expiry_date": "2027-03-07"
+      },
+      "after": {
+        "issue_date": "2025-02-10",
+        "expiry_date": "2026-02-10"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000037",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004370-003",
+      "before": {
+        "issue_date": "2026-04-26",
+        "expiry_date": "2027-04-26"
+      },
+      "after": {
+        "issue_date": "2025-05-07",
+        "expiry_date": "2026-05-07"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000038",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006658-002",
+      "before": {
+        "issue_date": "2026-07-31",
+        "expiry_date": "2027-07-31"
+      },
+      "after": {
+        "issue_date": "2025-07-29",
+        "expiry_date": "2026-07-29"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000039",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006543-002",
+      "before": {
+        "issue_date": "2026-08-24",
+        "expiry_date": "2027-08-24"
+      },
+      "after": {
+        "issue_date": "2025-08-27",
+        "expiry_date": "2026-08-27"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000040",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006186-002",
+      "before": {
+        "issue_date": "2026-07-03",
+        "expiry_date": "2027-07-03"
+      },
+      "after": {
+        "issue_date": "2025-07-18",
+        "expiry_date": "2026-07-18"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000041",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000515-001",
+      "before": {
+        "issue_date": "2026-03-24",
+        "expiry_date": "2027-03-24"
+      },
+      "after": {
+        "issue_date": "2025-03-09",
+        "expiry_date": "2026-03-09"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000042",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002423-005",
+      "before": {
+        "issue_date": "2026-09-17",
+        "expiry_date": "2027-09-17"
+      },
+      "after": {
+        "issue_date": "2025-09-05",
+        "expiry_date": "2026-09-05"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000043",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007006-002",
+      "before": {
+        "issue_date": "2026-08-13",
+        "expiry_date": "2027-08-13"
+      },
+      "after": {
+        "issue_date": "2025-08-26",
+        "expiry_date": "2026-08-26"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000044",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001657-004",
+      "before": {
+        "issue_date": "2026-08-01",
+        "expiry_date": "2027-08-01"
+      },
+      "after": {
+        "issue_date": "2025-07-23",
+        "expiry_date": "2026-07-23"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000045",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006947-002",
+      "before": {
+        "issue_date": "2026-09-12",
+        "expiry_date": "2027-09-12"
+      },
+      "after": {
+        "issue_date": "2025-08-26",
+        "expiry_date": "2026-08-26"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000046",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002115-004",
+      "before": {
+        "issue_date": "2026-10-03",
+        "expiry_date": "2027-10-03"
+      },
+      "after": {
+        "issue_date": "2025-09-20",
+        "expiry_date": "2026-09-20"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000047",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000271-001",
+      "before": {
+        "issue_date": "2026-04-21",
+        "expiry_date": "2027-04-21"
+      },
+      "after": {
+        "issue_date": "2025-04-22",
+        "expiry_date": "2026-04-22"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000048",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001437-003",
+      "before": {
+        "issue_date": "2026-03-06",
+        "expiry_date": "2027-03-06"
+      },
+      "after": {
+        "issue_date": "2025-03-08",
+        "expiry_date": "2026-03-08"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000049",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001066-003",
+      "before": {
+        "issue_date": "2026-06-19",
+        "expiry_date": "2027-06-19"
+      },
+      "after": {
+        "issue_date": "2025-05-27",
+        "expiry_date": "2026-05-27"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000050",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000449-001",
+      "before": {
+        "issue_date": "2026-03-23",
+        "expiry_date": "2027-03-23"
+      },
+      "after": {
+        "issue_date": "2025-04-23",
+        "expiry_date": "2026-04-23"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000051",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-005428-002",
+      "before": {
+        "issue_date": "2026-09-05",
+        "expiry_date": "2027-09-05"
+      },
+      "after": {
+        "issue_date": "2025-10-05",
+        "expiry_date": "2026-10-05"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000052",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-006553-002",
+      "before": {
+        "issue_date": "2026-08-27",
+        "expiry_date": "2027-08-27"
+      },
+      "after": {
+        "issue_date": "2025-08-05",
+        "expiry_date": "2026-08-05"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000053",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002147-003",
+      "before": {
+        "issue_date": "2026-06-10",
+        "expiry_date": "2027-06-10"
+      },
+      "after": {
+        "issue_date": "2025-05-11",
+        "expiry_date": "2026-05-11"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000054",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-002874-003",
+      "before": {
+        "issue_date": "2026-08-18",
+        "expiry_date": "2027-08-18"
+      },
+      "after": {
+        "issue_date": "2025-08-02",
+        "expiry_date": "2026-08-02"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000055",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-007804-002",
+      "before": {
+        "issue_date": "2026-10-03",
+        "expiry_date": "2027-10-03"
+      },
+      "after": {
+        "issue_date": "2025-10-13",
+        "expiry_date": "2026-10-13"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000056",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000623-002",
+      "before": {
+        "issue_date": "2026-08-09",
+        "expiry_date": "2027-08-09"
+      },
+      "after": {
+        "issue_date": "2025-07-28",
+        "expiry_date": "2026-07-28"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000057",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-003653-002",
+      "before": {
+        "issue_date": "2026-03-23",
+        "expiry_date": "2027-03-23"
+      },
+      "after": {
+        "issue_date": "2025-02-17",
+        "expiry_date": "2026-02-17"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000058",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-001981-003",
+      "before": {
+        "issue_date": "2026-10-05",
+        "expiry_date": "2027-10-05"
+      },
+      "after": {
+        "issue_date": "2025-09-13",
+        "expiry_date": "2026-09-13"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000059",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-000020-003",
+      "before": {
+        "issue_date": "2026-06-10",
+        "expiry_date": "2027-06-10"
+      },
+      "after": {
+        "issue_date": "2025-04-30",
+        "expiry_date": "2026-04-30"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000060",
+      "issue_type": "EXPIRED_DOCUMENT_MARKED_VALID",
+      "table": "Document",
+      "key": "DOC-CUS-004584-002",
+      "before": {
+        "issue_date": "2026-08-31",
+        "expiry_date": "2027-08-31"
+      },
+      "after": {
+        "issue_date": "2025-08-18",
+        "expiry_date": "2026-08-18"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000061",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-007366",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-17T09:43:56.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000062",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002724",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-01-21T17:34:23.000Z",
+        "gap": "Bank Statement"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000063",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006136",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-10T17:37:25.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000064",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006702",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-12T01:17:24.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000065",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-007603",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-27T02:18:04.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000066",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002920",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-17T03:00:00.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000067",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-001279",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-01T19:33:47.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000068",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004128",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-05-12T17:21:11.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000069",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003376",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2025-10-28T21:37:49.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000070",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000231",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-14T18:00:00.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000071",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004982",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-02-08T20:48:11.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000072",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002927",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-19T08:00:00.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000073",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004971",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-01-19T18:40:01.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000074",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006781",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-09T15:31:49.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000075",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-005088",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-02-19T08:49:59.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000076",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003072",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2025-04-20T18:51:46.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000077",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-007189",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-27T08:59:41.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000078",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002033",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2024-11-10T12:08:26.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000079",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-005326",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-03-19T11:56:46.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000080",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004383",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2025-11-05T14:21:02.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000081",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006280",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-17T05:55:18.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000082",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006064",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-17T18:13:25.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000083",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002503",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-03-06T05:08:03.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000084",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006201",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-11T19:46:37.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000085",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000555",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-24T20:00:00.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000086",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003648",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-23T04:15:17.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000087",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000732",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-27T06:00:00.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000088",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000144",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-04T04:00:00.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000089",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006337",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-22T12:03:22.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000090",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-005096",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-22T01:56:49.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000091",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-001569",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-29T18:00:00.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000092",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000513",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-02-12T01:26:20.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000093",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006508",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-17T06:02:51.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000094",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003545",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-02T12:27:19.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000095",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000523",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-09-11T04:00:00.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000096",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003223",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-01-22T15:51:46.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000097",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-007093",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-16T16:09:29.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000098",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004026",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-03-26T09:14:03.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000099",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000842",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-06-01T07:24:46.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000100",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006523",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-12T00:23:49.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000101",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006203",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-01T10:26:59.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000102",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006209",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-06-20T20:27:18.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000103",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-006666",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-12T06:25:17.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000104",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000342",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-07-17T23:17:39.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000105",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000587",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-08-27T15:00:00.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000106",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-004525",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2025-12-16T12:31:07.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000107",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-000704",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2024-04-01T03:25:13.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000108",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-007106",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-19T21:14:44.000Z",
+        "gap": "Photograph"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000109",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-002153",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-16T06:35:27.000Z",
+        "gap": "PAN"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000110",
+      "issue_type": "APPROVED_WITH_MISSING_EVIDENCE",
+      "table": "OnboardingDecision",
+      "key": "CUS-003454",
+      "before": null,
+      "after": {
+        "decision": "Approved",
+        "decided_at": "2026-10-02T02:15:26.000Z",
+        "gap": "Address Proof"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000111",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-000196",
+      "before": null,
+      "after": {
+        "added_owner": "Nisha Kapoor",
+        "ownership_percentage": 25
+      }
+    },
+    {
+      "issue_id": "ISSUE-000112",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005983",
+      "before": null,
+      "after": {
+        "added_owner": "Kabir Reddy",
+        "ownership_percentage": 12
+      }
+    },
+    {
+      "issue_id": "ISSUE-000113",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001638",
+      "before": {
+        "owner_id": 492,
+        "ownership_percentage": 38.89
+      },
+      "after": {
+        "owner_id": 492,
+        "ownership_percentage": 55.89
+      }
+    },
+    {
+      "issue_id": "ISSUE-000114",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-004438",
+      "before": null,
+      "after": {
+        "added_owner": "Harsh Khan",
+        "ownership_percentage": 7
+      }
+    },
+    {
+      "issue_id": "ISSUE-000115",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001146",
+      "before": {
+        "owner_id": 336,
+        "ownership_percentage": 42.71
+      },
+      "after": {
+        "owner_id": 336,
+        "ownership_percentage": 61.71
+      }
+    },
+    {
+      "issue_id": "ISSUE-000116",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005863",
+      "before": null,
+      "after": {
+        "added_owner": "Vivaan Naidu",
+        "ownership_percentage": 8
+      }
+    },
+    {
+      "issue_id": "ISSUE-000117",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-002784",
+      "before": null,
+      "after": {
+        "added_owner": "Saanvi Banerjee",
+        "ownership_percentage": 22
+      }
+    },
+    {
+      "issue_id": "ISSUE-000118",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005485",
+      "before": null,
+      "after": {
+        "added_owner": "Lakshmi Das",
+        "ownership_percentage": 13
+      }
+    },
+    {
+      "issue_id": "ISSUE-000119",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-002865",
+      "before": {
+        "owner_id": 831,
+        "ownership_percentage": 44.95
+      },
+      "after": {
+        "owner_id": 831,
+        "ownership_percentage": 55.95
+      }
+    },
+    {
+      "issue_id": "ISSUE-000120",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-006496",
+      "before": null,
+      "after": {
+        "added_owner": "Pooja Gupta",
+        "ownership_percentage": 18
+      }
+    },
+    {
+      "issue_id": "ISSUE-000121",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001642",
+      "before": null,
+      "after": {
+        "added_owner": "Aditya Verma",
+        "ownership_percentage": 13
+      }
+    },
+    {
+      "issue_id": "ISSUE-000122",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-006651",
+      "before": null,
+      "after": {
+        "added_owner": "Pooja Mehta",
+        "ownership_percentage": 24
+      }
+    },
+    {
+      "issue_id": "ISSUE-000123",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001910",
+      "before": {
+        "owner_id": 570,
+        "ownership_percentage": 19.56
+      },
+      "after": {
+        "owner_id": 570,
+        "ownership_percentage": 28.56
+      }
+    },
+    {
+      "issue_id": "ISSUE-000124",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-007509",
+      "before": null,
+      "after": {
+        "added_owner": "Aryan Ghosh",
+        "ownership_percentage": 12
+      }
+    },
+    {
+      "issue_id": "ISSUE-000125",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-000507",
+      "before": {
+        "owner_id": 143,
+        "ownership_percentage": 17
+      },
+      "after": {
+        "owner_id": 143,
+        "ownership_percentage": 28
+      }
+    },
+    {
+      "issue_id": "ISSUE-000126",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005610",
+      "before": null,
+      "after": {
+        "added_owner": "Saanvi Saxena",
+        "ownership_percentage": 18
+      }
+    },
+    {
+      "issue_id": "ISSUE-000127",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-004051",
+      "before": {
+        "owner_id": 1159,
+        "ownership_percentage": 20.58
+      },
+      "after": {
+        "owner_id": 1159,
+        "ownership_percentage": 33.58
+      }
+    },
+    {
+      "issue_id": "ISSUE-000128",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005739",
+      "before": null,
+      "after": {
+        "added_owner": "Aryan Mehta",
+        "ownership_percentage": 19
+      }
+    },
+    {
+      "issue_id": "ISSUE-000129",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-002530",
+      "before": null,
+      "after": {
+        "added_owner": "Diya Rao",
+        "ownership_percentage": 6
+      }
+    },
+    {
+      "issue_id": "ISSUE-000130",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001612",
+      "before": null,
+      "after": {
+        "added_owner": "Aditya Mehta",
+        "ownership_percentage": 7
+      }
+    },
+    {
+      "issue_id": "ISSUE-000131",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001361",
+      "before": null,
+      "after": {
+        "added_owner": "Arjun Chopra",
+        "ownership_percentage": 11
+      }
+    },
+    {
+      "issue_id": "ISSUE-000132",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-003278",
+      "before": null,
+      "after": {
+        "added_owner": "Isha Malhotra",
+        "ownership_percentage": 20
+      }
+    },
+    {
+      "issue_id": "ISSUE-000133",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-003554",
+      "before": {
+        "owner_id": 1014,
+        "ownership_percentage": 39.13
+      },
+      "after": {
+        "owner_id": 1014,
+        "ownership_percentage": 54.13
+      }
+    },
+    {
+      "issue_id": "ISSUE-000134",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005423",
+      "before": null,
+      "after": {
+        "added_owner": "Harsh Thakur",
+        "ownership_percentage": 23
+      }
+    },
+    {
+      "issue_id": "ISSUE-000135",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-003562",
+      "before": null,
+      "after": {
+        "added_owner": "Diya Sharma",
+        "ownership_percentage": 12
+      }
+    },
+    {
+      "issue_id": "ISSUE-000136",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-007922",
+      "before": null,
+      "after": {
+        "added_owner": "Yash Mehta",
+        "ownership_percentage": 21
+      }
+    },
+    {
+      "issue_id": "ISSUE-000137",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-002194",
+      "before": null,
+      "after": {
+        "added_owner": "Anjali Mishra",
+        "ownership_percentage": 23
+      }
+    },
+    {
+      "issue_id": "ISSUE-000138",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-002600",
+      "before": null,
+      "after": {
+        "added_owner": "Ananya Sharma",
+        "ownership_percentage": 15
+      }
+    },
+    {
+      "issue_id": "ISSUE-000139",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-000195",
+      "before": {
+        "owner_id": 63,
+        "ownership_percentage": 14.59
+      },
+      "after": {
+        "owner_id": 63,
+        "ownership_percentage": 23.59
+      }
+    },
+    {
+      "issue_id": "ISSUE-000140",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-006232",
+      "before": null,
+      "after": {
+        "added_owner": "Ananya Singh",
+        "ownership_percentage": 19
+      }
+    },
+    {
+      "issue_id": "ISSUE-000141",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001947",
+      "before": {
+        "owner_id": 575,
+        "ownership_percentage": 24.22
+      },
+      "after": {
+        "owner_id": 575,
+        "ownership_percentage": 39.22
+      }
+    },
+    {
+      "issue_id": "ISSUE-000142",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-003559",
+      "before": null,
+      "after": {
+        "added_owner": "Nisha Shetty",
+        "ownership_percentage": 8
+      }
+    },
+    {
+      "issue_id": "ISSUE-000143",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-001484",
+      "before": {
+        "owner_id": 444,
+        "ownership_percentage": 31.29
+      },
+      "after": {
+        "owner_id": 444,
+        "ownership_percentage": 41.29
+      }
+    },
+    {
+      "issue_id": "ISSUE-000144",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-000334",
+      "before": null,
+      "after": {
+        "added_owner": "Aryan Kulkarni",
+        "ownership_percentage": 7
+      }
+    },
+    {
+      "issue_id": "ISSUE-000145",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005019",
+      "before": {
+        "owner_id": 1413,
+        "ownership_percentage": 40.43
+      },
+      "after": {
+        "owner_id": 1413,
+        "ownership_percentage": 51.43
+      }
+    },
+    {
+      "issue_id": "ISSUE-000146",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-000459",
+      "before": null,
+      "after": {
+        "added_owner": "Saanvi Agarwal",
+        "ownership_percentage": 8
+      }
+    },
+    {
+      "issue_id": "ISSUE-000147",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-007316",
+      "before": null,
+      "after": {
+        "added_owner": "Harsh Mishra",
+        "ownership_percentage": 13
+      }
+    },
+    {
+      "issue_id": "ISSUE-000148",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005101",
+      "before": null,
+      "after": {
+        "added_owner": "Riya Desai",
+        "ownership_percentage": 17
+      }
+    },
+    {
+      "issue_id": "ISSUE-000149",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005183",
+      "before": {
+        "owner_id": 1466,
+        "ownership_percentage": 37.81
+      },
+      "after": {
+        "owner_id": 1466,
+        "ownership_percentage": 56.81
+      }
+    },
+    {
+      "issue_id": "ISSUE-000150",
+      "issue_type": "OWNERSHIP_OVER_100",
+      "table": "BeneficialOwner",
+      "key": "CUS-005814",
+      "before": null,
+      "after": {
+        "added_owner": "Fatima Pillai",
+        "ownership_percentage": 9
+      }
+    },
+    {
+      "issue_id": "ISSUE-000151",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002473-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000152",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-007485-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000153",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000123-2023",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000154",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003455-2026-02",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000155",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001211-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000156",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001805-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000157",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003113-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000158",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-004902-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000159",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002120-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000160",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003537-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000161",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005135-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000162",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005623-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000163",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002355-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000164",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003686-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000165",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001341-2026",
+      "before": {
+        "resolution_notes": "The periodic KYC review was completed and the customer file was brought up to date."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000166",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003727-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000167",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-007104-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000168",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005743-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000169",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002866-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000170",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-006720-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000171",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000121-2023",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000172",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001726-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000173",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000784-2026",
+      "before": {
+        "resolution_notes": "The periodic KYC review was completed and the customer file was brought up to date."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000174",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000061-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000175",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-007253-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000176",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005844-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000177",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002225-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000178",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005837-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000179",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000284-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000180",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002190-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000181",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002729-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000182",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001925-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000183",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005765-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000184",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002939-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000185",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-005280-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000186",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001604-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000187",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002078-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000188",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002352-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000189",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001549-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000190",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001717-2026",
+      "before": {
+        "resolution_notes": "The periodic KYC review was completed and the customer file was brought up to date."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000191",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003897-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000192",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002827-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000193",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-002900-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000194",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-001817-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000195",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-004294-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000196",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003135-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000197",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-000619-2024",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000198",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003138-2026",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000199",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-004342-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000200",
+      "issue_type": "CLOSED_WITHOUT_RESOLUTION",
+      "table": "ReviewCase",
+      "key": "REV-CUS-003367-2025",
+      "before": {
+        "resolution_notes": "A valid replacement document was received and checked; the exception cleared."
+      },
+      "after": {
+        "resolution_notes": null
+      }
+    },
+    {
+      "issue_id": "ISSUE-000201",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007302-001",
+      "before": {
+        "document_number_hash": "c28c664d8976b95b3807a2e88038f6f1c0156b876696083064e630e0f32184cf",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005054-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000202",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-001369-003",
+      "before": {
+        "document_number_hash": "630db4880007be6a57d2d0253febc7de00d5783a83ff1bfe60a98c1bc2415215",
+        "file_reference": "syn-doc-018564.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000798-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000203",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007801-002",
+      "before": {
+        "document_number_hash": "019f16b4e9fcc2429b87eb47af5b24eda5039ac135d61a0eb1e851764c6cca4e",
+        "file_reference": "syn-doc-019057.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-007484-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000204",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-000078-004",
+      "before": {
+        "document_number_hash": "018b17d9e897368ebc77e1815f54aa4e3aa03c6b2b773a79ec7d4ad7ed6b0932",
+        "file_reference": "syn-doc-015796.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001759-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000205",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-004407-003",
+      "before": {
+        "document_number_hash": "b1c3fe9ec0e6616dfe12844daad420bdab6eda3a52155b8df9f4e5a22ecc86b6",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001979-004",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000206",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-003170-004",
+      "before": {
+        "document_number_hash": "44edd46b5073ae6f00669d1adaf4e63ee055cc9a71de614f45b4fc0c56441682",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005776-003",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000207",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-004827-003",
+      "before": {
+        "document_number_hash": "d1e98116be89cffb194c44640675b1897f4068e21817833d1db0df43fc9fff12",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-004858-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000208",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-000825-002",
+      "before": {
+        "document_number_hash": "cdc4862e1e62de11fb59955cf82513d6c3d80d408029763fe82f0fc3b92c191b",
+        "file_reference": "syn-doc-013812.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000453-003",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000209",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-003757-003",
+      "before": {
+        "document_number_hash": "b1dca7903a9e5f4d6544332a8c2e1bead2d8493a270e3754e7dfe445aa5840e2",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-006099-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000210",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-002319-002",
+      "before": {
+        "document_number_hash": "82c73f1a69a50cd1c65037d4281414ff8f298ffea3fc8cdd95b1a02a606370b6",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-007176-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000211",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-002741-003",
+      "before": {
+        "document_number_hash": "d3da4b667285d420fc7ce0952b304c6643d99d9e59904aee2c9160eb9d9e0b52",
+        "file_reference": "syn-doc-015815.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001089-004",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000212",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-004968-001",
+      "before": {
+        "document_number_hash": "f352ef4fa21a76f8899d7f21e97361e387608227e12c0fbaa40aee9921b10458",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-004112-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000213",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007757-001",
+      "before": {
+        "document_number_hash": "11393199cdb62da17de74d830b4c7c55626ad72d35cd3e202f6539e5cc395747",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001367-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000214",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005616-003",
+      "before": {
+        "document_number_hash": "6ff9f612e3da0633f10c895eea242f4fee96d9f823a74000c0a95a2b4adece90",
+        "file_reference": "syn-doc-010867.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000405-001",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000215",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007222-001",
+      "before": {
+        "document_number_hash": "6442a85f9750775fdf1064f53485cea21fcc92e47ca7f00e7f0a67c405652862",
+        "file_reference": "syn-doc-015314.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005902-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000216",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005862-002",
+      "before": {
+        "document_number_hash": "a3e1755a267e05506386796e077da012215a86c6810f18d12f60d0804dec8bf0",
+        "file_reference": "syn-doc-014347.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-006764-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000217",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005967-001",
+      "before": {
+        "document_number_hash": "a86b04acce2167cfdc15501dc99075dcec7ea7b89844481cde5a9732ee6939c6",
+        "file_reference": "syn-doc-017718.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-007149-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000218",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007111-001",
+      "before": {
+        "document_number_hash": "05d661abdca2870784bb43b1550d9911dd4c9cc9ea190cf8a7267cf28965e091",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005125-004",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000219",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005966-001",
+      "before": {
+        "document_number_hash": "95aa451c966595612354f062b984ef2d164f0c990c2788939ccfe4c5645f96d8",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000396-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000220",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007506-001",
+      "before": {
+        "document_number_hash": "f2aed0a3f7e21272c8180b6e7120019a69870ce476f723e53dbfcb78cde3d80b",
+        "file_reference": "syn-doc-016633.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-006110-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000221",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007973-002",
+      "before": {
+        "document_number_hash": "adec3f55560dad84980988eb8613c3fba3cfe368f11ef26fc62d6cb442fcc909",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-003313-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000222",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005721-003",
+      "before": {
+        "document_number_hash": "01c21c191e854d2e61eb1273b5c4ae4cba11dfe1d8ed4c3c0079681aeb922cc6",
+        "file_reference": "syn-doc-019753.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000990-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000223",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-002677-003",
+      "before": {
+        "document_number_hash": "df39c77f34fd2608c1cb6adf5118338ca3c0ef74bfd0db9e75179fb08534d331",
+        "file_reference": "syn-doc-019138.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005950-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000224",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-002810-002",
+      "before": {
+        "document_number_hash": "90ca754f2b50171229ae27537440ea144a0489e13632179f926ae738c7c0a06f",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-004139-004",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000225",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007726-003",
+      "before": {
+        "document_number_hash": "7be0144c2d14d1747aaacefb856653743fa583a9c13ecedba791fb05be9a662d",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-002932-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000226",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-006575-001",
+      "before": {
+        "document_number_hash": "21e835e3d1bff5f385bdfd6a19225e4080f6c9f3f10ca580fa6cda2269291615",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001639-002",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000227",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-003720-002",
+      "before": {
+        "document_number_hash": "9782e2fe32cbaa5bfdd59cacc28cc1ac5c2bd0e74221130acd143860fe6c40a3",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001783-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000228",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005071-004",
+      "before": {
+        "document_number_hash": "2d1ac5ada7373493f3390086d658ad8712aeaf6b22db105c899281c08f51a7d6",
+        "file_reference": "syn-doc-019736.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-006532-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000229",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-003043-001",
+      "before": {
+        "document_number_hash": "eb9ae646d7814c036afffea51b065ac4e0db60d83309061a54b1a578e6eb2111",
+        "file_reference": "syn-doc-016216.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005388-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000230",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-006019-003",
+      "before": {
+        "document_number_hash": "0f2d432414a3cb03e2fb7f9a57a85005cbcaecca14744136850821e7015f4001",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000198-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000231",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007719-001",
+      "before": {
+        "document_number_hash": "73d8e7df249b297363126a17a172da296aa091069e446a64db03a1efb17b0f87",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005668-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000232",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-001736-003",
+      "before": {
+        "document_number_hash": "70293d5a754279b148a8e319b26a22e76ee03dc406223179c5f9ee78759a0c1b",
+        "file_reference": "syn-doc-019598.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001591-004",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000233",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-006706-004",
+      "before": {
+        "document_number_hash": "b24637c52f55aead572cced5941b4356275bd4c8b21cd2da073865aba76b4a4a",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005671-003",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000234",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-007597-002",
+      "before": {
+        "document_number_hash": "264dfc07e2f1ba8679c9c31245436bc7998a37fb94ecb2bbf0443484779d3a64",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-000371-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000235",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-006647-003",
+      "before": {
+        "document_number_hash": "4893a27133b57eda1e009d143300c37ab59157b0946479b3bd4a4ea0a49ed890",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-001336-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000236",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-004231-001",
+      "before": {
+        "document_number_hash": "a759ee5b969b584f7f29520ee3db600718107bcd17c7a7ee5f46da3ae7f9513d",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-007330-002",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000237",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-001235-003",
+      "before": {
+        "document_number_hash": "4726dd4ed407306e65c6471a7a54000925ba7cfdfeb3a1d5a0497726a14700f2",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-006227-002",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000238",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-006443-002",
+      "before": {
+        "document_number_hash": "37597ceb464ddba72b9ab411fcccbfa74255d20829a746782921d6bdb3cc5ddb",
+        "file_reference": "syn-doc-015449.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005550-001",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000239",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-004660-003",
+      "before": {
+        "document_number_hash": "c1df8fb535f7bc3fa43822f9f8ba7d5233a10713f369248daac04f2e60710883",
+        "file_reference": "syn-doc-016587.pdf"
+      },
+      "after": {
+        "copied_from": "DOC-CUS-005801-001",
+        "method": "copy_number"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000240",
+      "issue_type": "DOCUMENT_REUSED_ACROSS_CUSTOMERS",
+      "table": "Document",
+      "key": "DOC-CUS-005013-001",
+      "before": {
+        "document_number_hash": "613e8c47820e1920e1add70f0c8f5ce9b1e8a79facaf527c6a597e20fb453742",
+        "file_reference": null
+      },
+      "after": {
+        "copied_from": "DOC-CUS-004408-001",
+        "method": "copy_file"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000241",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006338-001",
+      "before": {
+        "name_on_document": "Coral Energy Hyderabad Pvt Ltd"
+      },
+      "after": {
+        "name_on_document": "Ironbridge Motors Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000242",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001883-001",
+      "before": {
+        "name_on_document": "L. Joshi"
+      },
+      "after": {
+        "name_on_document": "Isha Joshi"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000243",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004669-003",
+      "before": {
+        "name_on_document": "Varun Iyer"
+      },
+      "after": {
+        "name_on_document": "Meera Verma"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000244",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002058-001",
+      "before": {
+        "name_on_document": "Suresh Shharma"
+      },
+      "after": {
+        "name_on_document": "Rohan Sharma"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000245",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002027-001",
+      "before": {
+        "name_on_document": "Zoya Naidu"
+      },
+      "after": {
+        "name_on_document": "Nikhil Patel"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000246",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003822-002",
+      "before": {
+        "name_on_document": "Zoya Chopra"
+      },
+      "after": {
+        "name_on_document": "Arjun Chopra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000247",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000951-001",
+      "before": {
+        "name_on_document": "KAVYA NAIR"
+      },
+      "after": {
+        "name_on_document": "Yash Shetty"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000248",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006171-001",
+      "before": {
+        "name_on_document": "G. Menon"
+      },
+      "after": {
+        "name_on_document": "Riya Menon"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000249",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003642-005",
+      "before": {
+        "name_on_document": "Ishaan Yadav"
+      },
+      "after": {
+        "name_on_document": "Diya Das"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000250",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002150-001",
+      "before": {
+        "name_on_document": "Shetty Nisha"
+      },
+      "after": {
+        "name_on_document": "Varun Shetty"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000251",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005345-001",
+      "before": {
+        "name_on_document": "Varun Agarwal"
+      },
+      "after": {
+        "name_on_document": "Aryan Chatterjee"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000252",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005701-001",
+      "before": {
+        "name_on_document": "Harsh Reddy"
+      },
+      "after": {
+        "name_on_document": "Aryan Reddy"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000253",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006430-002",
+      "before": {
+        "name_on_document": "Tanvi Nair"
+      },
+      "after": {
+        "name_on_document": "Harsh Bhatt"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000254",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004806-002",
+      "before": {
+        "name_on_document": "Smt. Priyanka Patel"
+      },
+      "after": {
+        "name_on_document": "Gauri Patel"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000255",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001600-002",
+      "before": {
+        "name_on_document": "Nimbbus Energy Ltd"
+      },
+      "after": {
+        "name_on_document": "Skyline Agro Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000256",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004542-001",
+      "before": {
+        "name_on_document": "Priyanka Bose"
+      },
+      "after": {
+        "name_on_document": "Sneha Gupta"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000257",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006428-001",
+      "before": {
+        "name_on_document": "Farhan Malhotra"
+      },
+      "after": {
+        "name_on_document": "Nisha Malhotra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000258",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007107-002",
+      "before": {
+        "name_on_document": "Aarav Joshi"
+      },
+      "after": {
+        "name_on_document": "Neel Desai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000259",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006823-003",
+      "before": {
+        "name_on_document": "Arjun Naidu"
+      },
+      "after": {
+        "name_on_document": "Aarav Naidu"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000260",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007009-003",
+      "before": {
+        "name_on_document": "Yash Mehta"
+      },
+      "after": {
+        "name_on_document": "Arjun Menon"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000261",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003615-001",
+      "before": {
+        "name_on_document": "Gauri  Saxena"
+      },
+      "after": {
+        "name_on_document": "Dev Saxena"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000262",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005936-002",
+      "before": {
+        "name_on_document": "Manav Bhatt"
+      },
+      "after": {
+        "name_on_document": "Meera Pillai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000263",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007551-003",
+      "before": {
+        "name_on_document": "M. Mehta"
+      },
+      "after": {
+        "name_on_document": "Aarav Mehta"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000264",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004208-001",
+      "before": {
+        "name_on_document": "D. Ghosh"
+      },
+      "after": {
+        "name_on_document": "Suresh Joshi"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000265",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004953-001",
+      "before": {
+        "name_on_document": "Sharma Ishaan"
+      },
+      "after": {
+        "name_on_document": "Ananya Sharma"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000266",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001533-002",
+      "before": {
+        "name_on_document": "Pooja Thakur"
+      },
+      "after": {
+        "name_on_document": "Varun Banerjee"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000267",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006401-002",
+      "before": {
+        "name_on_document": "A. Banerjee"
+      },
+      "after": {
+        "name_on_document": "Imran Banerjee"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000268",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006513-002",
+      "before": {
+        "name_on_document": "Gupta Manav"
+      },
+      "after": {
+        "name_on_document": "Tara Khan"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000269",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000211-001",
+      "before": {
+        "name_on_document": "Kavya Agarwal"
+      },
+      "after": {
+        "name_on_document": "Imran Agarwal"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000270",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000771-001",
+      "before": {
+        "name_on_document": "Aurora Traders Ltd"
+      },
+      "after": {
+        "name_on_document": "Northgate Holdings Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000271",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002945-003",
+      "before": {
+        "name_on_document": "Varun  Patel"
+      },
+      "after": {
+        "name_on_document": "Divya Malhotra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000272",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003928-001",
+      "before": {
+        "name_on_document": "Diya Menon"
+      },
+      "after": {
+        "name_on_document": "Yash Menon"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000273",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001213-001",
+      "before": {
+        "name_on_document": "Lakshmi Malhotra"
+      },
+      "after": {
+        "name_on_document": "Isha Agarwal"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000274",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000994-002",
+      "before": {
+        "name_on_document": "Aarav Saxena"
+      },
+      "after": {
+        "name_on_document": "Nikhil Saxena"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000275",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003298-001",
+      "before": {
+        "name_on_document": "Gauri Desai"
+      },
+      "after": {
+        "name_on_document": "Aditya Iyer"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000276",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007968-002",
+      "before": {
+        "name_on_document": "Dev Mehta"
+      },
+      "after": {
+        "name_on_document": "Nikhil Mehta"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000277",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001940-002",
+      "before": {
+        "name_on_document": "Zoya Rao"
+      },
+      "after": {
+        "name_on_document": "Manav Saxena"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000278",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001546-003",
+      "before": {
+        "name_on_document": "Omkar Pillai"
+      },
+      "after": {
+        "name_on_document": "Kavya Pillai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000279",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003392-001",
+      "before": {
+        "name_on_document": "Neel Rao"
+      },
+      "after": {
+        "name_on_document": "Divya Kapoor"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000280",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003239-001",
+      "before": {
+        "name_on_document": "Varun Chopra"
+      },
+      "after": {
+        "name_on_document": "Imran Chopra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000281",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004730-002",
+      "before": {
+        "name_on_document": "Sunrise Foods Ltd"
+      },
+      "after": {
+        "name_on_document": "Skyline Enterprises Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000282",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005065-001",
+      "before": {
+        "name_on_document": "Riya M Thakur"
+      },
+      "after": {
+        "name_on_document": "Fatima Ghosh"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000283",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005277-002",
+      "before": {
+        "name_on_document": "Tara Joshi"
+      },
+      "after": {
+        "name_on_document": "Dev Joshi"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000284",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003575-002",
+      "before": {
+        "name_on_document": "Meera Kapoor"
+      },
+      "after": {
+        "name_on_document": "Isha Patel"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000285",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000492-001",
+      "before": {
+        "name_on_document": "Varun Pillai"
+      },
+      "after": {
+        "name_on_document": "Tanvi Pillai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000286",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006933-001",
+      "before": {
+        "name_on_document": "Rohan Chopra"
+      },
+      "after": {
+        "name_on_document": "Harsh Iyer"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000287",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000349-003",
+      "before": {
+        "name_on_document": "Neel Mishra"
+      },
+      "after": {
+        "name_on_document": "Vivaan Mishra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000288",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003696-001",
+      "before": {
+        "name_on_document": "Omkar Ghosh"
+      },
+      "after": {
+        "name_on_document": "Zoya Naidu"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000289",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004290-001",
+      "before": {
+        "name_on_document": "Kavya Khan"
+      },
+      "after": {
+        "name_on_document": "Ananya Khan"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000290",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004956-001",
+      "before": {
+        "name_on_document": "Mishra Omkar"
+      },
+      "after": {
+        "name_on_document": "Nikhil Chatterjee"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000291",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-001310-003",
+      "before": {
+        "name_on_document": "Coral Technologies Pvt Ltd"
+      },
+      "after": {
+        "name_on_document": "Tidewater Agro Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000292",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005291-003",
+      "before": {
+        "name_on_document": "Vivaan Das"
+      },
+      "after": {
+        "name_on_document": "Suresh Das"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000293",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-006865-001",
+      "before": {
+        "name_on_document": "Shri. Zoya Ghosh"
+      },
+      "after": {
+        "name_on_document": "Riya Bose"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000294",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000735-003",
+      "before": {
+        "name_on_document": "Aditya Pillai"
+      },
+      "after": {
+        "name_on_document": "Yash Pillai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000295",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004032-001",
+      "before": {
+        "name_on_document": "Diya Khan"
+      },
+      "after": {
+        "name_on_document": "Nikhil Mishra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000296",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-004082-002",
+      "before": {
+        "name_on_document": "Smt. Rohan Pillai"
+      },
+      "after": {
+        "name_on_document": "Divya Pillai"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000297",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002859-002",
+      "before": {
+        "name_on_document": "Meera Das"
+      },
+      "after": {
+        "name_on_document": "Aditya Mishra"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000298",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000758-003",
+      "before": {
+        "name_on_document": "Gauri Bhatt"
+      },
+      "after": {
+        "name_on_document": "Isha Bhatt"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000299",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000666-003",
+      "before": {
+        "name_on_document": "Aarav Agarwal"
+      },
+      "after": {
+        "name_on_document": "Rohan Mehta"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000300",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-000967-003",
+      "before": {
+        "name_on_document": "Mrs. Riya Nair"
+      },
+      "after": {
+        "name_on_document": "Tara Nair"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000301",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-003842-001",
+      "before": {
+        "name_on_document": "Nikhil Bhatt"
+      },
+      "after": {
+        "name_on_document": "Nisha Rao"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000302",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002812-002",
+      "before": {
+        "name_on_document": "Tanvi Saxena"
+      },
+      "after": {
+        "name_on_document": "Nisha Saxena"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000303",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007408-002",
+      "before": {
+        "name_on_document": "Imran Maalhotra"
+      },
+      "after": {
+        "name_on_document": "Dev Yadav"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000304",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007601-001",
+      "before": {
+        "name_on_document": "Karan Chatterjjee"
+      },
+      "after": {
+        "name_on_document": "Ishaan Chatterjee"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000305",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-007668-002",
+      "before": {
+        "name_on_document": "Priyanka Nair"
+      },
+      "after": {
+        "name_on_document": "Nisha Sharma"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000306",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002715-001",
+      "before": {
+        "name_on_document": "Suresh Mehta"
+      },
+      "after": {
+        "name_on_document": "Isha Mehta"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000307",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-005914-001",
+      "before": {
+        "name_on_document": "Pooja Rao"
+      },
+      "after": {
+        "name_on_document": "Sneha Thakur"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000308",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002146-003",
+      "before": {
+        "name_on_document": "Pooja Patel"
+      },
+      "after": {
+        "name_on_document": "Riya Patel"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000309",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002231-004",
+      "before": {
+        "name_on_document": "Silverline Solutions Nagpur Pvt Ltd"
+      },
+      "after": {
+        "name_on_document": "Tidewater Agro Pvt Ltd"
+      }
+    },
+    {
+      "issue_id": "ISSUE-000310",
+      "issue_type": "DOCUMENT_NAME_MISMATCH",
+      "table": "Document",
+      "key": "DOC-CUS-002030-002",
+      "before": {
+        "name_on_document": "Kabir Desai"
+      },
+      "after": {
+        "name_on_document": "Aryan Reddy"
+      }
+    }
+  ],
+  "edge_database_checksums": {
+    "Document": "daff950ef54781aa519e0607fef65c0e",
+    "OnboardingDecision": "7e6d6a516f125ec1dd047d4ae2cec451",
+    "BeneficialOwner": "d3593b173443bff557f34a3682c6b9e2",
+    "ReviewCase": "5e700b79312ac1a78c590cc80fd1f0d3",
+    "CompanyOwnership": "c5b9c75c4604500a6a8e4141c08eb11e",
+    "dataset": "7a66138fc96d16d970e83818748536fd"
+  },
+  "ground_truth_sha256": "9fa719194b772de86df77c721f5a4967c6b0b81c3dd254d0f0b6defdadbe84dd"
+}

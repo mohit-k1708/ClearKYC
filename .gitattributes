@@ -1,0 +1,13 @@
+# Default: let git normalise source text files to LF inside the repository.
+* text=auto
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# Keep the dataset files byte-for-byte as they are (later lines override the default above).
+# ClearKYC-Dataset/checksums.txt and the dataset result files were computed over LF text with no byte-order mark; converting them to CRLF
+# (git's default on Windows) would make `npm run verify:checksums` fail for anyone who clones the project.
+ClearKYC-Dataset/** -text
+dataset/** -text
+generator/reports/** -text
+documentation/source_manifest.md -text

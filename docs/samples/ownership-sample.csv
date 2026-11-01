@@ -1,0 +1,7 @@
+Company Customer ID,Company Name,Owner ID,Owner Name,Ownership %,Ownership Type,Control Type,Declared PEP Status,Country of Residence,Nationality,Latest PEP Screening,Latest Sanctions Screening,Company Total Ownership %,Company Ownership Validation
+CUS-000005,Orchid Foods Pvt Ltd,1,Vikram Khanna,70,Direct,Shareholding,Yes,IR,,Confirmed,No Match,100,RECONCILED
+CUS-000005,Orchid Foods Pvt Ltd,2,Pooja Ghosh,30,Direct,Shareholding,No,IN,IN,No Match,No Match,100,RECONCILED
+CUS-000010,Silverline Industries Ltd,3,Kunal Varma,60,Direct,Shareholding,No,IN,IN,No Match,No Match,110,EXCEEDS_100
+CUS-000010,Silverline Industries Ltd,4,Dev Trivedi,50,Direct,Shareholding,No,IN,IN,No Match,No Match,110,EXCEEDS_100
+CUS-000015,Granite Traders LLP,5,Vikram Oberoi,40,Direct,Shareholding,No,IN,IN,No Match,No Match,70,BELOW_100
+CUS-000015,Granite Traders LLP,6,Yash Khanna,30,Direct,Shareholding,No,IN,IN,No Match,No Match,70,BELOW_100
