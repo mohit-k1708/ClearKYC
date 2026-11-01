@@ -4,6 +4,7 @@
   "private": true,
   "description": "ClearKYC - Scene 1: Customer Onboarding (backend, Prisma schema and scripts live at the repo root; the React app lives in client/)",
   "main": "server/src/server.js",
+  "license": "MIT",
   "engines": { "node": ">=20" },
   "scripts": {
     "db:local": "node scripts/localPostgres.js",

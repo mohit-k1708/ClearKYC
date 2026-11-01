@@ -23,6 +23,10 @@ Stack: React 18 + React Router + Tailwind CSS v4 + Axios + React Hook Form (Vite
 > **Authentication is simulated.** The "Acting as" selector in the sidebar chooses a demo person (Analyst, Reviewer or Admin) and sends it as the
 > `X-Reviewer-Id` header. The server enforces what each role may do, but nobody is logged in and the header is trusted. A real deployment needs real login.
 
+## License
+
+MIT, see [LICENSE](LICENSE). The data is synthetic; no regulatory compliance is claimed.
+
 ## Required software
 
 | Software | Version | Needed for |
